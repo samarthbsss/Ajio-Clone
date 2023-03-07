@@ -52,3 +52,44 @@ body{
     margin-bottom: 6px;
     margin-top: 6px;
   }
+
+  #sortbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    border: 2px solid red;
+    background-color: #f9f9f9;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+
+  #sortbar > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #sortbar > div:first-child {
+    /* margin:0px; */
+  
+    margin-left: 20px;
+    margin-right: 94px;
+    /* paddin10px 20px; */
+  }
+
+  #sort{
+    margin-left: auto;
+  }
+
+  #info{
+    /* padding-bottom: 50px; */
+    text-align: center;
+    margin-bottom: 5vh;
+    font-family: Lora;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    color: #333;
+    text-transform: capitalize;
+  }

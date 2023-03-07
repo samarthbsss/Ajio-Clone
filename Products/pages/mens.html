@@ -15,8 +15,25 @@
     <link rel="stylesheet" href="../styles/mens.css">
 </head>
 <body>
-    <div id="sale"></div>
-    <div id="sortbar"></div>
+    <div id="info">
+        Men's Product
+    </div>
+    <div id="sortbar">
+        <div id="count"><span></span>Items Found</div>
+        <div id="grid-container">Grid:</div>
+        <div id="sort">
+
+            <select name="" id="sortit" onchange="sortvalue()" >
+                <option value="SbyR" class="rec"> &nbsp; &nbsp;sort: by Recommended</option>
+                 <option value="new">&nbsp; &nbsp;What's New</option>
+                 <option value="Popularity">&nbsp; &nbsp;Popularity</option>
+                 <option value="discount" >&nbsp; &nbsp;Better Discount</option>
+                 <option value="htl" >&nbsp; &nbsp;Price: High to Low</option>
+                 <option value="lth" >&nbsp; &nbsp;Price: Low to High</option>
+
+                </select>
+        </div>
+    </div>
     <div id="sidebar"></div>
     <div id="data">
         <!-- <h1>Data</h1>; -->
