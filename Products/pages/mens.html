@@ -15,11 +15,27 @@
     <link rel="stylesheet" href="../styles/mens.css">
 </head>
 <body>
+    <div id="sidebar">
+        <div id="refine" onclick="hide()">
+            <p>Refine <span onclick="hide()">+</span></p>
+        </div>
+        <div id="dropdown">
+            <div id="gender">
+               
+                <p>Men<span></span>
+                </p>
+                <p>Women<span></span></p>
+            </div>
+        </div>
+
+       
+    </div>
+    <div id="contain">
     <div id="info">
         Men's Product
     </div>
     <div id="sortbar">
-        <div id="count"><span></span>Items Found</div>
+        <div id="count">Items Found:<span></span></div>
         <div id="grid-container">Grid:</div>
         <div id="sort">
 
@@ -34,11 +50,11 @@
                 </select>
         </div>
     </div>
-    <div id="sidebar"></div>
+   
     <div id="data">
         <!-- <h1>Data</h1>; -->
     </div>
-   
+</div>
     
 </body>
 </html>
