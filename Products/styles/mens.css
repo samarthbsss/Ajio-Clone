@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 30px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  /* #data div{
+    border: 2px solid red;
+  } */
+
+  .pricebox{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Lora', serif; */
+  }
+
+  .pricebox p:nth-child(2) {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: line-through ;
+  }
+
+  .pricebox p:last-child{
+    color: #b19975;
+  }
+
+  .brand{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #b19975;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 6px;
+  }
+
+  .desc{
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    margin-top: 6px;
+  }
