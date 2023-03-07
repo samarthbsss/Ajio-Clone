@@ -307,7 +307,7 @@ const products = [
   displayproducts(products);
 
 function displayproducts(products){
-    // let contain=document.querySelector("data").innerHTML="";
+    let contain=document.querySelector("#data-men").innerHTML="";
     console.log(products);
      products.forEach(function(ele, i){
         const div = document.createElement('div');
@@ -341,7 +341,7 @@ function displayproducts(products){
         pricebox.append(mrp, finalprice,offer);
         // buttonbox.append(wishbt);
         div.append(image,brandbox, pricebox);
-        document.querySelector("#data").append(div);
+        document.querySelector("#data-men").append(div);
 
      })
 }
@@ -355,3 +355,68 @@ function hide(){
   }
 }
 
+function genderhide(){
+  let gender=document.getElementById("gender-contain");
+  if(gender.style.display!=="none"){
+    gender.style.display="none";
+  }
+  else{
+    gender.style.display="block";
+  }
+}
+
+function pricehide(){
+  let gender=document.getElementById("price-contain");
+  if(gender.style.display!=="none"){
+    gender.style.display="none";
+  }
+  else{
+    gender.style.display="block";
+  }
+}
+
+function colorhide(){
+  let gender=document.getElementById("color-contain");
+  if(gender.style.display!=="none"){
+    gender.style.display="none";
+  }
+  else{
+    gender.style.display="block";
+  }
+}
+
+function sortvalue(){
+  var sortvalue=document.getElementById("sortit").value;
+  console.log(sortvalue);
+  if(sortvalue=="htl"){
+      products.sort(function(a,b){
+          return b.price-a.price;
+      });
+      displayproducts(products);
+  }
+  if (sortvalue == "lth") {
+      products.sort(function(a,b) {
+        return a.price - b.price;
+      });
+      displayproducts(products);
+    }
+    if(sortvalue =="discount"){
+      products.sort(function(a,b){
+          return b.discount - a.discount;
+      });
+      displayproducts(products);
+    }
+
+    if(sortvalue=="SbyR"){
+      location.reload();
+    }
+    if(sortvalue=="new"){
+      products.sort();
+      products.reverse();
+      displayproducts(products);
+    }
+    if(sortvalue=="Popularity"){
+      products.sort(function(){return 0.5 - Math.random()});
+      displayproducts(products);
+    }
+}

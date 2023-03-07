@@ -17,14 +17,36 @@
 <body>
     <div id="sidebar">
         <div id="refine" onclick="hide()">
-            <p>Refine <span onclick="hide()">+</span></p>
+            <p>Refine <span>+</span></p>
         </div>
         <div id="dropdown">
-            <div id="gender">
-               
-                <p>Men<span></span>
-                </p>
-                <p>Women<span></span></p>
+            <div id="gender" >
+                <p><span onclick="genderhide()">+&nbsp;&nbsp;</span>Gender</p>
+                <div id="gender-contain">
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="gender-male">Male</span> <br>
+                <input type="checkbox" id="women-filter" name="women-filter" value="women"> <span class="gender-women">Women</span><br>   
+                <hr>    
+            </div>
+            </div>
+            <div id="price" >
+                <p><span onclick="pricehide()">+&nbsp;&nbsp;</span>Brand</p>
+                <div id="price-contain">
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Male</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Male</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Male</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Male</span> <br>
+                <hr>
+            </div>
+            </div>
+            <div id="color" >
+                <p><span onclick="colorhide()">+&nbsp;&nbsp;</span>Color</p>
+                <div id="color-contain">
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Red</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Black</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">White</span> <br>
+                <input type="checkbox" id="men-filter" name="men-filter" value="men"> <span class="@">Yellow</span> <br>
+                <hr>
+            </div>
             </div>
         </div>
 
@@ -51,7 +73,7 @@
         </div>
     </div>
    
-    <div id="data">
+    <div id="data-men">
         <!-- <h1>Data</h1>; -->
     </div>
 </div>
