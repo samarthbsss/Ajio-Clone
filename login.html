@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <title>LogIn</title>
+</head>
+<body>
+    
+ <!-- create main box -->
+ <div id = "main">
+
+    <!-- create Main heading -->
+    <p class = "head">Welcome to AJIO</p>
+
+    <!-- create join heading -->
+    <h3 id = "in">Log-In</h3>
+
+    <!-- social media box -->
+    <div id = "logobox">
+
+        <!-- create fb box -->
+        <div class = "boxes" id = "fb">
+            <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+            <h4>FACEBOOK</h4>
+        </div>
+
+        <div>
+            <!-- create google box -->
+            <div class = "boxes" id = "google">
+                <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                <h4>GOOGLE</h4>
+            </div>
+        </div> 
+    </div>
+
+    <!-- create hr -->
+    <div id = "line">
+        <hr>or<hr>
+    </div>
+     
+    <!-- Input Feilds -->
+    <div class="container">
+        <!-- <label>Enter UserName</label><br> -->
+        <input class="input" id="username" type="text" placeholder= "Enter email" ><br><br>
+
+        <!-- <label>Enter Password</label><br> -->
+        <input class="input" id="password" type="password" placeholder="Enter Password" ><br><br>
+
+        <span class="border"></span>
+       </div>
+
+       <!-- submit Button -->
+       <button  onclick="logIn()" id = "btn">CONTINUE</button>
+
+       <!-- Terms & Cond. -->
+       <p class = "p">Go back to the <span id = "color"><a href="/user/signup">Sign page.</a></span> </p>
+</div>
+
+
+</body>
+</html>
+<script>
+let url = "https://ajio-clone-full.herokuapp.com/user/login"
+async function logIn(){
+let detail = {
+    email: document.getElementById("username").value,
+    password: document.getElementById("password").value,
+}
+    if(detail.email.length === 0) return alert("Please enter a email")
+    if(detail.password.length === 0) return alert("Please enter a password")
+detail = JSON.stringify(detail);
+let response = await fetch(url, {
+    method:"POST",
+    body: detail,
+    headers:{
+        "Content-Type": "application/json"
+    }
+});
+let data = await response.json();
+if(data.error === true){
+        alert(data.message);
+    } else if (data.va === true){
+        alert(data.errors[0].msg);
+    } else{
+        goinghomepag();
+    }
+        
+}
+function goinghomepag() {
+    window.location.href = "/"
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+ -->
