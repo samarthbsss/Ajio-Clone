@@ -24,6 +24,7 @@
     z-index: 4;
   }
   #navbar {
+    /* display:block; */
     overflow: hidden;
     background-color: rgb(255, 255, 255);
     display: flex;

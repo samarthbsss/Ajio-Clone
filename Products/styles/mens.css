@@ -4,27 +4,18 @@ body{
 }
 
 #data-men{
-    width: 55%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 30px;
+    grid-gap: 20px;
+ 
     /* margin: auto; */
-    padding: 30px;
-    /* border: 2px solid red; */
+    /* padding: 10px; */
   }
- /* #data div{
-    border: 2px solid red;
-  } 
-
-  */
 
   .pricebox{
     display: flex;
     justify-content: center;
-    margin: auto;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    /* font-family: 'Lora', serif; */
   }
 
   .pricebox p:nth-child(2) {
@@ -60,10 +51,10 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
     background-color: #f9f9f9;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     padding-top: 25px;
+    margin-bottom: 20px;
    
   }
 
@@ -74,11 +65,9 @@ body{
   }
   
   #sortbar > div:first-child {
-    /* margin:0px; */
-  
     margin-left: 20px;
     margin-right: 94px;
-    /* paddin10px 20px; */
+  
   }
 
   #sort{
@@ -87,24 +76,26 @@ body{
   }
 
   #info{
-    /* padding-bottom: 50px; */
+    margin-top: 100px;
     text-align: center;
-    margin-bottom: 5vh;
     font-family: Lora;
     font-size: 36px;
     font-weight: 500;
     letter-spacing: .1px;
     color: #333;
     text-transform: capitalize;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    padding-bottom: 50px;
+   
   }
 
 #sidebar{
-    margin-top: 50px;
+    margin-top:30px;
     float: left;
     /* border: 0.6px solid teal; */
     width: 10%;
     height: 100vh;
+    padding-top: 30px;
     padding: 20px;
     text-align: left;
 }
@@ -123,3 +114,4 @@ body{
     position: relative;
     cursor: pointer;
 }
+

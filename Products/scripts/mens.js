@@ -340,8 +340,16 @@ function displayproducts(products){
         brand.textContent = ele.company_name;
         brand.setAttribute("class","brand");
 
+        const imagebox=document.createElement('div');
+        imagebox.setAttribute("class","imagebox");
         const image = document.createElement("img");
         image.setAttribute("src", ele.poster);
+        imagebox.onclick=function(){
+          localStorage.setItem("pop", JSON.stringify(ele));
+          
+          location.href='popup.html';
+        }
+        // console.log(ele.id);
 
         const desc = document.createElement("h3");
         desc.textContent = ele.description;
@@ -362,12 +370,13 @@ function displayproducts(products){
         const offer=document.createElement("p");
         offer.textContent=ele.discount;
 
+        imagebox.append(image);
         brandbox.append(brand,desc);
         pricebox.append(mrp, finalprice,offer);
         // buttonbox.append(wishbt);
-        div.append(image,brandbox, pricebox);
+        div.append(imagebox,brandbox, pricebox);
         document.querySelector("#data-men").append(div);
-
+        console.log(ele);
      })
 }
 
