@@ -101,9 +101,20 @@ body{
     width: 10%;
     height: 100vh;
     padding: 20px;
+    text-align: left;
 }
 
 #sidebar div{
   display: block;
   /* border: 2px solid teal; */
+}
+
+#refine{
+  text-transform: capitalize;
+    font-size: 18px;
+    font-family: lora;
+    margin: 5px 4px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
 }
