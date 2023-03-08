@@ -334,6 +334,8 @@ function displayproducts(products){
     console.log(products);
      products.forEach(function(ele, i){
         const div = document.createElement('div');
+        div.setAttribute("class","card-div");
+
         const brand = document.createElement("h3");
         brand.textContent = ele.company_name;
         brand.setAttribute("class","brand");

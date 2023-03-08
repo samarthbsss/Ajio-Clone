@@ -4,17 +4,20 @@ body{
 }
 
 #data-men{
+    width: 55%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 50px;
     grid-column-gap: 30px;
-    margin: auto;
+    /* margin: auto; */
     padding: 30px;
+    /* border: 2px solid red; */
   }
-
-  /* #data div{
+ /* #data div{
     border: 2px solid red;
-  } */
+  } 
+
+  */
 
   .pricebox{
     display: flex;
@@ -58,10 +61,10 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
-    border: 2px solid red;
     background-color: #f9f9f9;
     padding-bottom: 25px;
     padding-top: 25px;
+   
   }
 
   #sortbar > div {
@@ -80,6 +83,7 @@ body{
 
   #sort{
     margin-left: auto;
+  
   }
 
   #info{
@@ -96,8 +100,9 @@ body{
   }
 
 #sidebar{
+    margin-top: 50px;
     float: left;
-    border: 0.6px solid teal;
+    /* border: 0.6px solid teal; */
     width: 10%;
     height: 100vh;
     padding: 20px;
