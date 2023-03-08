@@ -328,10 +328,81 @@ const products = [
 let id = localStorage.getItem("pop") ? localStorage.getItem("pop") : "";
 console.log(id);
 
-const nex =JSON.parse(id);
+const data =JSON.parse(id);
 
 console.log(JSON.parse(id));
 
-// const imagediv=document.getElementById("AA");
-// image=document.createElement('img');
-// image.setAttribute("src", ele.poster);
+// s
+
+document.getElementById('name').innerHTML = data.company_name;
+
+
+
+
+// document.getElementById('name').innerHTML = J[0].name
+//   document.getElementById('TILE').innerHTML = J[0].name
+// document.getElementById('price').innerHTML = 'Rs. ' + J[0].price
+// document.getElementById('brand').innerHTML = J[0].brand
+// var ex = Number(J[0].price) + 256
+// var str = document.getElementById('str')
+// str.style.textDecoration = 'line-through'
+// str.innerHTML = 'Rs. ' + ex
+// str.style.marginRightt = '5px'
+// document.getElementById('per').innerHTML = '(26% off)'
+
+var IMG1 = document.getElementById('AA')
+var aI = document.createElement('img')
+aI.src = data.poster;
+aI.style.width = '100%'
+IMG1.append(aI)
+var IMG2 = document.getElementById('AB')
+var bI = document.createElement('img')
+bI.src = data.poster2;
+bI.style.width = '100%';
+IMG2.append(bI)
+var IMG3 = document.getElementById('AC')
+var cI = document.createElement('img')
+cI.src = data.poster3;
+cI.style.width = '100%'
+IMG3.append(cI)
+var IMG4 = document.getElementById('AD')
+var dI = document.createElement('img')
+dI.src = data.poster4
+dI.style.width = '100%'
+IMG4.append(dI)
+
+var M = document.getElementById('mains-img')
+var m = document.createElement('img')
+m.style.width = '100%'
+var i = 0
+var im = [data.poster, data.poster2, data.poster3, data.poster4]
+m.src = im[i]
+M.append(m)
+setInterval(function () {
+  if (i > 3) {
+    i = 0
+  }
+  m.src = im[i]
+  M.append(m)
+  i++
+}, 4000)
+
+
+// if (localStorage.getItem('CART') === null) {
+//   localStorage.setItem('CART', JSON.stringify([]))
+// }
+
+// function add() {
+//   document.getElementById('float').style.display = 'block'
+//   document.getElementById('blk').style.display = 'block'
+//   var cart = []
+//   cart.push(J[0])
+//   let cart_data = JSON.parse(localStorage.getItem('CART'))
+//   cart_data.push(J[0])
+//   localStorage.setItem('CART', JSON.stringify(cart_data))
+//   setTimeout(function () {
+//     document.getElementById('float').style.display = 'none'
+//     document.getElementById('blk').style.display = 'none'
+//   }, 2000)
+// }
+
