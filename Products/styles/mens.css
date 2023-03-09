@@ -1,117 +1,169 @@
 body{
     text-align: center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   
 }
 
 #data-men{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    cursor: pointer;
+  }
+
+
+.card-div{
+  width:100%;
+  height:100%;
+  /* margin-left: 15px;
+  margin-right:20px; */
+}
+.imagebox{
+  /* display: block; */
+  margin-left: 47px;
+  width:75%;
+  height:75%;
+  padding: 20px;
+}
+
+.imagebox>img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.pricebox{
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pricebox p:nth-child(2) {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: line-through ;
+}
+
+.pricebox p:last-child{
+  color: #b19975;
+}
+
+.brand{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #b19975;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+.desc{
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+#sortbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+  padding-bottom: 30px;
+  padding-top: 25px;
+  margin-bottom: 20px;
  
-    /* margin: auto; */
-    /* padding: 10px; */
-  }
+}
 
-  .pricebox{
-    display: flex;
-    justify-content: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
+#sortbar > div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
 
-  .pricebox p:nth-child(2) {
-    margin-left: 5px;
-    margin-right: 5px;
-    text-decoration: line-through ;
-  }
+#sortbar > div:first-child {
+  margin-left: 20px;
+  margin-right: 94px;
+}
 
-  .pricebox p:last-child{
-    color: #b19975;
-  }
-
-  .brand{
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #b19975;
-    text-overflow: ellipsis;
-    font-weight: 600;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-bottom: 6px;
-  }
-
-  .desc{
-    font-weight: 600;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-bottom: 6px;
-    margin-top: 6px;
-  }
-
-  #sortbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #f9f9f9;
-    padding-bottom: 30px;
-    padding-top: 25px;
-    margin-bottom: 20px;
-   
-  }
-
-  #sortbar > div {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-  }
+#sort{
+  margin-left: auto;
   
-  #sortbar > div:first-child {
-    margin-left: 20px;
-    margin-right: 94px;
-  
-  }
+}
 
-  #sort{
-    margin-left: auto;
-  
-  }
-
-  #info{
-    margin-top: 100px;
-    text-align: center;
-    font-family: Lora;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: .1px;
-    color: #333;
-    text-transform: capitalize;
-    /* margin-top: 20px; */
-    padding-bottom: 50px;
-   
-  }
+ #info{
+  margin-top: 105px;
+  text-align: center;
+  font-family: Lora;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: .1px;
+  color: #333;
+  text-transform: capitalize;
+  /* margin-top: 20px; */
+  padding-bottom: 50px;
+ 
+} 
 
 #sidebar{
-    margin-top:30px;
-    float: left;
-    /* border: 0.6px solid teal; */
-    width: 10%;
-    height: 100vh;
-    padding-top: 30px;
-    padding: 20px;
-    text-align: left;
+  margin-top:90px;
+  float: left;
+  background-color: white;
+  /* border: 0.6px solid teal; */
+  width: 10%;
+  height: 100vh;
+  padding-top: 30px;
+  padding: 20px;
+  text-align: left;
 }
 
 #sidebar div{
-  display: block;
-  /* border: 2px solid teal; */
+display: block;
+
 }
 
 #refine{
-  text-transform: capitalize;
-    font-size: 18px;
-    font-family: lora;
-    margin: 5px 4px;
-    font-weight: 700;
-    position: relative;
-    cursor: pointer;
+text-transform: capitalize;
+  font-size: 18px;
+  font-family: lora;
+  margin: 5px 4px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}  
+
+/* body,div{
+  border: 2px solid teal;
+} */
+
+#quickView {
+  background-color: #ffffff;
+  /* background-color: black; */
+  color: #162636;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  opacity: 77%;
+  width: 100%;
+  /* border: 5px solid red; */
+  height: 50px;
+  z-index: 5;
+  box-sizing: border-box;
+  padding-top: 8px;
+  display: none;
+  margin-top: -45px;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#data-men > .card-div:hover {
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+  scale: 1.09;
+  transition: 0.3s;
 }
 
