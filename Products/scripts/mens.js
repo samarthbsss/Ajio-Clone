@@ -1,9 +1,9 @@
 const products = [
-  {
-    id:1,
+  { 
     company_name: 'ROADSTER',
     description: 'Graphic Regular Fit Crew- Neck T-shirt',
     price: '330',
+    id:1,
     original_price: 'Rs. 1,099',
     discount: '(70% off)',
     quantity: 1,
@@ -323,6 +323,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/hbf/hab/15155846905886/-473Wx593H-441031716-charcoal-MODEL4.jpg'
   }
 ]
+
 
 //   window.addEventListener("load", function () {
   

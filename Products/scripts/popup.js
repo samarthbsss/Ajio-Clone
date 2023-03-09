@@ -336,20 +336,6 @@ console.log(JSON.parse(id));
 
 document.getElementById('name').innerHTML = data.company_name;
 
-
-
-
-// document.getElementById('name').innerHTML = J[0].name
-//   document.getElementById('TILE').innerHTML = J[0].name
-// document.getElementById('price').innerHTML = 'Rs. ' + J[0].price
-// document.getElementById('brand').innerHTML = J[0].brand
-// var ex = Number(J[0].price) + 256
-// var str = document.getElementById('str')
-// str.style.textDecoration = 'line-through'
-// str.innerHTML = 'Rs. ' + ex
-// str.style.marginRightt = '5px'
-// document.getElementById('per').innerHTML = '(26% off)'
-
 var IMG1 = document.getElementById('AA')
 var aI = document.createElement('img')
 aI.src = data.poster;
@@ -375,7 +361,7 @@ var M = document.getElementById('mains-img')
 var m = document.createElement('img')
 m.style.width = '100%'
 var i = 0
-var im = [data.poster, data.poster2, data.poster3, data.poster4]
+var im = [ data.poster2, data.poster3, data.poster4]
 m.src = im[i]
 M.append(m)
 setInterval(function () {
