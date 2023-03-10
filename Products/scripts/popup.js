@@ -326,13 +326,9 @@ const products = [
 
 
 let id = localStorage.getItem("pop") ? localStorage.getItem("pop") : "";
-// console.log(id);
 
 const data =JSON.parse(id);
 
-// console.log(JSON.parse(id));
-
-// s
 document.querySelector('title').innerHTML=data.company_name+" | "+data.description;
 
 

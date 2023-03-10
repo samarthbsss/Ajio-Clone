@@ -53,7 +53,7 @@ const products = [
   {
     color:"black",
     id:4,
-    company_name: "MUJI",
+    company_name: "DNMX",
     description: "Cotton Washed Oxford Stand-Collar Shirt",
     price: "1990",
     original_price: "Rs. 1,910",
@@ -68,7 +68,7 @@ const products = [
   {
     color:"blue",
     id:5,
-    company_name: "DENNISLINGO PREMIUM ATTIRE",
+    company_name: "Indie Picks",
     description: "Slim Fit Shirt with Patch Pocket",
     price: "573",
     original_price: "Rs. 1,849",
@@ -86,7 +86,7 @@ const products = [
   {
     color:"blue",
     id:6,
-    company_name: 'FRENCH COLLECTION',
+    company_name: 'ROADSTER',
     description: 'Columbia Lightly Washed Skinny Fit Jeans',
     price: '1715',
     original_price: 'Rs. 3,299 ',
@@ -116,7 +116,7 @@ const products = [
   {
     color:"none",
     id:8,
-    company_name: "MUJI",
+    company_name: "DNMX",
     description: "Cotton Washed Oxford Stand-Collar Shirt",
     price: "1990",
     original_price: "",
@@ -146,7 +146,7 @@ const products = [
   {
     color:"red",
     id:10,
-    company_name: "DENNISLINGO PREMIUM ATTIRE",
+    company_name: "ROADSTER",
     description: "Band Collar Slim Fit Shirt",
     price: "573",
     original_price: "Rs. 1,849",
@@ -161,7 +161,7 @@ const products = [
   {
     color:"white",
     id:11,
-    company_name: "Bene Kleed",
+    company_name: "DNMX",
     description: "Floral Print Slim Fit Shirt with Patch Pocket",
     price: "630",
     original_price: "Rs. 2,099",
@@ -191,7 +191,7 @@ const products = [
   {
     color:"orange",
     id:13,
-    company_name: "Indie Picks",
+    company_name: "ROADSTER",
     description: "Mandarin-Collar South-Cotton Kurta",
     price: "1400",
     orginal_price: "Rs. 3,499",
@@ -236,7 +236,7 @@ const products = [
   {
     color:"yellow",
     id:16,
-    company_name: "NETPLAY",
+    company_name: "DNMX",
     description: "Slim Fit Shirt with Patch Pocket",
     price: "490",
     original_price: "Rs. 999",
@@ -296,7 +296,7 @@ const products = [
   {
     color:"red",
     id:20,
-    company_name: 'DENNISLINGO PREMIUM ATTIRE',
+    company_name: 'ROADSTER',
     description: 'Slim Fit Shirt with Spread Collar',
     price: '573',
     original_price: 'Rs. 1849',
@@ -326,7 +326,7 @@ const products = [
   {
     color:"blue",
     id:22,
-    company_name: 'PERFORMAX',
+    company_name: 'THE INDIAN GARAGE CO',
     description: 'Panelled Track Pants with Elasticated Drawstring Waist',
     price: '449',
     original_price: 'Rs. 599',
@@ -341,7 +341,7 @@ const products = [
   {
     color:"black",
      id:23,
-    company_name: 'TEAMSPIRIT',
+    company_name: 'THE INDIAN GARAGE CO',
     description: 'Heathered Track Pants with Contrast Taping',
     price: '374',
     original_price: 'Rs. 499',
@@ -471,6 +471,16 @@ function colorhide(){
   }
 }
 
+function brandhide(){
+  let gender=document.getElementById("brand-contain");
+  if(gender.style.display!=="none"){
+    gender.style.display="none";
+  }
+  else{
+    gender.style.display="block";
+  }
+}
+
 function sortvalue(){
   var sortvalue=document.getElementById("sortit").value;
   console.log(sortvalue);
@@ -511,3 +521,93 @@ const dataMen = document.getElementById('data-men');
 function twogrid(){
   dataMen.classList.toggle('grid-2cols');
 }
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+ 
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+     let filteredArray = [];
+      checkboxes.forEach(function(cb) {
+        if (cb.checked) {
+          filteredArray = [...filteredArray, ...products.filter(function(obj) {
+            return obj.company_name === cb.value;
+            console.log(obj.brand,cb.value);
+         
+          })];
+
+        }
+      });
+
+      // to edit
+      checkboxes.forEach(function(cb) {
+        if (cb.checked) {
+          filteredArray = [...filteredArray, ...products.filter(function(obj) {
+            return obj.color === cb.value;
+            console.log(obj.brand,cb.value);
+         
+          })];
+          
+        }
+      });
+
+      // checkboxes.forEach(function(cb) {
+      //   if (cb.checked) {
+      //     filteredArray = [...filteredArray, ...products.filter(function(obj) {
+      //       if(cb.value==10){
+      //       return obj.offer >10;
+      //     }
+      //     if(cb.value==20){
+      //       return obj.offer >20;
+      //     }
+      //     if(cb.value==30){
+      //       return obj.offer >30;
+      //     }
+      //     if(cb.value==40){
+      //       return obj.offer >40;
+      //     }
+      //     if(cb.value==50){
+      //       return obj.offer >50;
+      //     }
+      //       console.log(obj.brand,cb.value);
+         
+      //     })];
+          
+      //   }
+      // });
+
+      
+      // to edit
+
+      // checkboxes.forEach(function(cb) {
+      //   if (cb.checked) {
+      //     switch (cb.value) {
+      //       case 'Rs 279 to Rs 499':
+      //         filteredArray = [...filteredArray, ...array.filter(function(obj) {
+      //           return obj.price >= 279 && obj.price <= 499;
+      //         })];
+      //         break;
+      //       case 'Rs 479 to Rs 799':
+      //         filteredArray = [...filteredArray, ...array.filter(function(obj) {
+      //           return obj.price >= 479 && obj.price <= 799;
+      //         })];
+      //         break;
+      //       case 'Rs 579 to Rs 999':
+      //         filteredArray = [...filteredArray, ...array.filter(function(obj) {
+      //           return obj.price >= 579 && obj.price <= 999;
+      //         })];
+      //         break;
+      //     }
+      //   }
+      // });
+        
+      // to edit
+    
+      if(filteredArray.length===0){
+          displayproducts(products);
+      }
+      else{
+          displayproducts(filteredArray);
+      }
+    });
+  });
+
