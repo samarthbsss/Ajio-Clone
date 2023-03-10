@@ -119,16 +119,16 @@ option5.value = "5";
 option5.text = "5";
 size.add(option5);
  var saving=document.createElement("h2");
- saving.textContent="Saving : ₹ "+((parseInt(item.stripped_price)-parseInt(item.price))).toFixed(2);
+ saving.textContent="Saving : ₹ "+(100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
  var stripped_price=document.createElement("h2")
- stripped_price.textContent="Rs " +(item.stripped_price);
+ stripped_price.textContent="Rs " +(item.price*item.discount).toFixed(2);
  
 
 
   qty.addEventListener("change",function(){
-    var pr=(qty.value)*((parseInt(item.stripped_price)-parseInt(item.price)));
+    var pr=(qty.value)*(3*(parseInt(item.price)));
  saving.textContent="Saving : ₹ "+pr.toFixed(2);
- stripped_price.textContent="Rs " +((qty.value)*(item.stripped_price)).toFixed(2);
+ stripped_price.textContent="Rs " +((qty.value)*((parseInt(item.discount)/10)*parseInt(item.price))).toFixed(2);
 
  price.textContent="Rs "+((qty.value)*(item.sales_price)).toFixed(2);
 
