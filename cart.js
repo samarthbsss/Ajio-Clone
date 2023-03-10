@@ -11,7 +11,7 @@ var Data=[{
     title:"DENNISLINGO PREMIUM ATTIRE",
     det:"Striped Slim Fit Shirt",
     price:"599.00",
-    stripped_price:2990.00,
+    stripped_price:"2990.00",
     off:"(73% off)",
     sales_price:"900.00"
 },{
@@ -27,17 +27,18 @@ var Data=[{
     title:"DENNISLINGO PREMIUM ATTIRE",
     det:"Striped Slim Fit Shirt",
     price:"599.00",
-    stripped_price:2990.00,
+    stripped_price:"2990.00",
     off:"(73% off)",
     sales_price:"900.00"
 }]
-var disc=0;
-var Total=0;
-var totalAmt=0;
-var pro;
+
 display(Data);
 // fetching data from local storage//
 function display(data){
+    var disc=0;
+var Total=0;
+var totalAmt=0;
+// var pro;
     document.getElementById("products").innerHTML="";
     data.forEach((item, index) => {
 var product=document.createElement("div");
@@ -56,7 +57,10 @@ title.textContent=item.title;
 
 //  pro= event.target.parentNode;
 
-
+var Size=document.createElement("h3");
+Size.textContent="Size";
+var Qty=document.createElement("h3");
+Qty.textContent="Qty";
 var size=document.createElement("select")
 size.name="Size";
 size.setAttribute("selected","selected disabled");
@@ -193,7 +197,7 @@ var div4=document.createElement("div");
 div4.setAttribute("id","third");
 div4.append(saving,stripped_price,div5);
 div3.append(div1,div);
-div1.append(title,size,qty);
+div1.append(title,Size,size,Qty,qty);
 product.append(div2,div3,div4)
 var det2=document.getElementById("det2");
 disc=+((parseInt(item.stripped_price)-parseInt(item.price))).toFixed(2);

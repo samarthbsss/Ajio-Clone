@@ -15,7 +15,7 @@ margin-left: 100px;
 
 
 #products{
-    /* border: 2px solid red; */
+    border: 2px solid red;
     height:600px;
     margin-right: 400px;
     margin-left: 30px;
@@ -50,19 +50,31 @@ margin-left: 100px;
     width: 20%;
     /* border: 2px solid black; */
     gap: 10px;
+   
 }
 #first img{ 
-    width: 80%;
-    height: 90%;
+    width: 85%;
+    height: 93%;
+ 
+    margin: auto;
     margin-top: 8px;
     margin-left: 5px;
-    image: resolution 1px; ;
 }
 #second{
     /* border: 2px solid rgb(232, 11, 11); */
     display: block;
     width: 690px;
+    ;
 }
+#second h3{
+    margin-left: 20px;
+}
+#second:nth-child(2){
+    margin-left: -10px;
+    font-family: Lora;
+}
+
+
 #detail{
     display: flex;
     /* border: 2px solid rgb(11, 232, 96); */
@@ -92,7 +104,7 @@ margin-left: 100px;
     margin-top: 20px;
     height: 40px;
     width: 60px;
-    margin-left: 30px;
+    margin-left: 5px;
     border-radius: 9px;
     text-align: center;
     text-decoration-color: rgb(119, 119, 197);
@@ -104,7 +116,7 @@ margin-left: 100px;
 #third{
     /* border: 2px solid red; */
     margin-left: -200px;
-    font-size: 10px;
+    font-size: 12px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 150px;
     
@@ -113,38 +125,43 @@ margin-left: 100px;
 #third h2:nth-child(2){
     text-decoration: line-through;
     color: #B09975;
-
+   font-size: 17px;
 }
 
 #third h2{
     /* border: 2px solid black; */
     width: 200px;
-
+    /* padding: 10px; */
+    font-size: 16px;
+    color: #666;
+    font-family: Source Sans Pro Semi Bold;
 }
 #Price{
     background-color:#e1c38f;
     /* width: 40%; */
-    margin-left: 130px;
-    margin-top: -25px;
+    margin-left: 10px;
+    margin-top: 20px;
     text-align: center; 
     /* border: 2px solid red;   */
     border-radius: 7px;
-    font-size: 15px;
+    font-size: 16px;
     width: 140px;
     height: 30px;
     text-align: center;
     
+    
 
 }
 #Price h3{
-    
+    color: #333333;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* margin-top: -.2px; */
     /* margin-left: -85px; */
 }
 #Price hr,#hori{
-    border-width: 8px;
-    border-color: #176D96;
+    border-width: 7px;
+    border-color: #2f4254;
+    border-left: #D5a249;
 }
 
 #total_items{
@@ -187,11 +204,13 @@ margin-left: 100px;
     
  /* }  */
 
+ 
+
 #od,#coupon h3,h2{
     margin-left: 20px;
     font-weight: 700;
     
-    font-size: 20px;
+    font-size: 16px;
     color: #333333;
     margin-top: 15px;
 }
@@ -237,12 +256,19 @@ margin-left: 100px;
     padding: 15px 57px 15px 77px;
     border: none;
     border-radius: 4px;
-    color: white;
+    color:#333333;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
     
 }
+
+#ord{
+    font-size: 12px;
+}
+
+
 
 /*cop*/
 
@@ -274,4 +300,8 @@ margin-left: 100px;
 
 #couponP{
     margin-left: 20px;
+}
+
+button,a,#btn1{
+    cursor: pointer;
 }

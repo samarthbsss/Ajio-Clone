@@ -26,10 +26,18 @@ var products=document.createElement("div");
 products.setAttribute("id","products")
 var img=document.createElement("img");
 img.src=item.img;
+var brand=document.createElement("div");
+
 var h2=document.createElement("h2");
-h2.textContent=item.title;  
+h2.textContent=item.title; 
+h2.setAttribute("class","brand_name"); 
 var h3=document.createElement("h3");
 h3.textContent=item.det;
+h3.setAttribute("class","desc")
+brand.append(h2,h3);
+brand.setAttribute("class","brand");
+
+
 var Price=document.createElement("div");
 Price.setAttribute("class","Price");
 var price=document.createElement("h4");
@@ -42,10 +50,11 @@ Price.append(price,stripped_price,off);
 var sales_price=document.createElement("div");
 sales_price.innerText=item.sales_price;
 sales_price.setAttribute("id","sales");
-products.append(img,h2,h3,Price,sales_price);
+
+products.append(img,brand,Price,sales_price);
 
 // console.log((img,h2,price,stripped_price,off,sales_price));
-document.getElementById("wishlist").append(products);});}
+document.getElementById("container").append(products);});}
 
 
 
