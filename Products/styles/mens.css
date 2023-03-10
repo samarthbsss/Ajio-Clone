@@ -94,13 +94,13 @@ body{
   
 }
 
- #info{
+ #info>h1{
   margin-top: 105px;
   text-align: center;
   font-family: Lora;
   font-size: 36px;
   font-weight: 500;
-  letter-spacing: .1px;
+  /* letter-spacing: .1px; */
   color: #333;
   text-transform: capitalize;
   /* margin-top: 20px; */
@@ -108,11 +108,20 @@ body{
  
 } 
 
+#info>p{
+  color: #333;
+  font-weight: 300;
+  padding-bottom: 30px;
+  margin-top: -35px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 #sidebar{
   margin-top:90px;
   float: left;
   background-color: white;
-  /* border: 0.6px solid teal; */
+  
   width: 10%;
   height: 100vh;
   padding-top: 30px;
@@ -120,9 +129,10 @@ body{
   text-align: left;
 }
 
+
 #sidebar div{
 display: block;
-
+padding:10px;
 }
 
 #refine{
@@ -135,9 +145,9 @@ text-transform: capitalize;
   cursor: pointer;
 }  
 
-/* body,div{
-  border: 2px solid teal;
-} */
+  /* body,div{
+    border: 2px solid teal;
+  } */
 
 #quickView {
   background-color: #ffffff;
@@ -167,3 +177,7 @@ text-transform: capitalize;
   transition: 0.3s;
 }
 
+#sidebar>div>div:hover{
+  scale: 1.09;
+  transition: 0.3s;
+}

@@ -35,7 +35,7 @@ const products = [
     company_name: "Indie Picks",
     description: "Cotton Dobby Short Kurta",
     price: "559",
-    orginal_price: "Rs. 1,299",
+    original_price: "Rs. 1,299",
     discount: "57",
     quantity: 1,
     poster:
