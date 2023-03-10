@@ -1,0 +1,151 @@
+#container{
+    margin-top: 200px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+#container h1{
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-family: Lora;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+#wishlist h2{
+    font-size: 10px;
+    font-family: Muli;
+    color: #b19975;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: -1px;
+    }
+    #price h4:nth-child(2){
+        text-decoration: line-through;
+    }
+
+#products{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid green; */
+    text-align: center  ;
+}
+#wishlist{
+       /* border: 2px solid red; */
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       height: 300px;
+       /* gap: -80px; */       
+       
+}
+#products img{
+    width: 90%;
+}
+#products{
+    /* border: 2px solid yellow; */
+    width: 70%;   
+    /* border: 2px solid red; */
+    justify-content: space-around;
+} 
+
+.Price{
+    display: flex;
+    font-size: 15px;
+    gap: 2px;
+    /* border: 2px solid red; */
+    height: 20px;
+    margin-top: 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Price h4{
+    margin-top: -5px;
+    color: #333;   
+    font-size: 12px;
+    
+}
+.Price :nth-child(1){
+    color: #101010;
+}
+
+.Price :nth-child(2){
+    text-decoration: line-through;
+}
+.Price :nth-child(3){
+   color: rgb(38, 223, 223);
+}
+#sales{
+    /* border: 2px solid black; */
+    margin-top: -10px;
+    color: #333;
+    font-family: Lora;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#products #price{
+    display: flex;
+    gap:8px;   
+   padding-top: -20px;
+    /* text-align: center; */
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: -20px;   
+    font-size: 20px;
+    color: #333;
+    /* border: 2px solid red;   */
+    }
+    #price h4{
+        margin-top:10px;
+        margin-bottom:5px;
+        font-size: 12px;
+    }
+#products h3{
+    margin-top: -8px;
+    color: #333;   
+    font-size: 10px;
+}
+
+#sales_price{
+    background-color:rgb(188, 226, 242);
+     /* border: 2px solid green; */
+     font-size: 12px;
+}
+
+
+    .exchange_icons {
+        /* border:1px solid red; */
+        width: 100%;
+        justify-content: space-evenly;
+        /* border: 2px solid red; */
+        font-size: 14px;
+        font-weight: 700;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #333; 
+       
+    }    
+    .bottom_icons {
+        display: flex;
+        width: 100%;
+        margin-top: 1%;
+        /* margin-left: 23%; */
+        /* border: 2px solid red; */
+        text-align: center;
+        /* margin-left: 100px; */
+        height: 50px;
+        /* background-color: rgb(226, 218, 218); */
+                 
+    }
+    .exchange_icons img {
+        width:10%;
+        /* border: 2px solid red; */
+        margin-bottom:-10px ;
+        /* background-color: rgb(226, 218, 218); */
+       
+    }
