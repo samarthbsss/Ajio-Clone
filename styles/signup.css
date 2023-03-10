@@ -1,0 +1,127 @@
+* {
+    font-family: sans-serif;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  a{
+    cursor: pointer;
+  }
+  #main {
+    border: 1px solid rgb(68, 67, 67);
+    height: 600px;
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+  }
+  .head {
+    font-weight: normal;
+    font-size: 20px;
+    color: rgb(83, 83, 83);
+    margin-top: 15px;
+  }
+  
+  #logobox {
+    display: flex;
+    height: 60px;
+    width: 98%;
+    margin: auto;
+  }
+  .boxes {
+    height: 70%;
+    width: 42%;
+    margin: auto;
+    margin-right: 40px;
+  }
+  #fb {
+    /* height: 90%; */
+    /* width: 50%; */
+    border: 2px solid rgb(73, 73, 212);
+    display: flex;
+    color: rgb(13, 13, 189);
+    line-height: 5px;
+    margin-left: 2px;
+  }
+  #fb > img {
+    height: 30px;
+    width: 35px;
+    padding: 5px;
+  }
+  #google {
+    border: 2px solid rgb(182, 13, 13);
+    display: flex;
+    color: rgb(182, 13, 13);
+    /* height: 100%; */
+    width: 99%;
+    line-height: 5px;
+    margin-top: 7px;
+  }
+  #google > img {
+    height: 30px;
+    width: 35px;
+    padding: 5px;
+    background-color: white;
+  }
+  #line {
+    display: flex;
+    color: rgb(156, 145, 145);
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    gap: 15px;
+    justify-content: center;
+  }
+  hr {
+    color: black;
+    width: 100px;
+  }
+  .container {
+    width: 96%;
+  
+    position: relative;
+    margin-top: 25px;
+  }
+  
+  .input {
+    width: 90%;
+    border: 0;
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .input ~ .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+  }
+  .input:focus ~ .border {
+    width: 100%;
+    transition: 0.5s;
+  }
+  #btn {
+    border: 1px solid white;
+    height: 40px;
+    width: 170px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(199, 134, 15);
+  }
+  body {
+    background-color: #fff;
+  }
+  :focus {
+    outline: none;
+  }
+  
+  span {
+    color: blue;
+  }
+  .p {
+    font-size: 13px;
+  }
+  #in {
+    color: rgb(83, 83, 83);
+  }
