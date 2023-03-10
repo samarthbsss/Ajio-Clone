@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart _Page</title>
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="Products/styles/navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
      
     </style>
 </head>
 <body>
+
+    <div id="nav-bar"></div>
+    <br><br><br><br><br><br>
     <hr>
 
 <div id="container">
     <div id="header"><h3>My Bag <span id="total_items">(1 Items)</span></h3>
-    <a href="wishlist.html">+ Add From Wishlist</a>    
+    <a id="anchor1" href="wishlist.html">+ Add From Wishlist</a>    
     </div>
+    <hr>
     <div id="container1">
     <div id="products">
         
@@ -27,38 +33,53 @@
         <div id="bill">
             
             <h4 id="od">Order Details </h4>
-            <p>Bag Total <span id="det1"></span></p> 
-            <p>Bag Discount <span id="det2"></span></p>
+            <br>
+            <p id="ord">Bag Total <span id="det1"></span></p> 
+            <br>
+            <p id="ord">Bag Discount <span id="det2"></span></p>
+            <br>
             <!-- <p>Delivery <span id="det3"></span></p> -->
-            <h4>Order Total<span id="det4">1</span></h4>
-          <button id='btn'>PROCEED TO SHIPPING</button>
+            <h4 id="od">Order Total<span id="det4"></span></h4>
+            <br>
+          <button id='btn'>  PROCEED TO SHIPPING </button>
+          <hr id="hori">
         </div>
         <div id="coupon">
             <h3>Apply Coupon</h3>
+            <br>
             <input type="text" name="" id="couponCode" placeholder="Enter Coupon Code Here">
-            <button>APPLY</button>      
-            <h2>Applicable Coupon</h2>      
-             <input type="radio"> Saving: ₹ 1.00</button>
+           
+            <button>APPLY</button>  
+            <br>    
+            <h2>Applicable Coupon</h2>     
+            <br> 
+             <input id="coup" type="radio"> Saving: ₹ 1.00</button>
+             <br>
              <h2>FREEDEL</h2>
-             <p>Free Shipping For Limited Period.
+             <br>
+             <p id="couponP">Free Shipping For Limited Period.
                 View T & C</p>
+                <br>
                 <input type="text" name="" id="couponCode" placeholder="Enter Coupon Code Here">
             <button>APPLY</button>      
-            <h2>Applicable Coupon</h2>      
-             <input type="radio"> Saving: ₹ 1.00</button>
+            <br>
+            <h2>Applicable Coupon</h2>    
+            <br>  
+             <input type="radio" id="coup"> Saving: ₹ 1.00</button>
+             <br> 
              <h2>FREEDEL</h2>
-             <p>Free Shipping For Limited Period.
+             <br> 
+             <p id="couponP" >Free Shipping For Limited Period.
                 View T & C</p>
         </div>
     </div>
    
 </div>
-
-
-
-
 </div>
+<br><br><br><br>
+<div id="main-footer"></div>
 </body>
 <script src="cart.js"></script>
-
+<script src="Products/components/navbar.js"></script>
+<script src="footer.js"></script>
 </html>

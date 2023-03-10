@@ -1,7 +1,16 @@
 
 #header{
     /* border: 2px solid red; */
-
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 29px;
+    /* margin-right: 20px; */
+    align-items: center;
+    padding-right: 20px;
+}
+#header:first-child{
+margin-left: 100px;
 }
 
 
@@ -24,14 +33,17 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
-
+#anchor1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#176D93
+}
 #anchor{
     margin-top: 160px;
-    margin-right: 0px;
+    
     /* padding-left: 90px; */
     /* border: 2px solid rgb(216, 208, 98); */
     gap: 20px;
-    width: 80%;
+    /* width: 400px; */
     display: flex;
 }
 #first {
@@ -51,7 +63,7 @@
     display: block;
     width: 690px;
 }
-#details{
+#detail{
     display: flex;
     /* border: 2px solid rgb(11, 232, 96); */
     font-size: 14px;
@@ -61,7 +73,7 @@
 
 }
 
-    #details h2{    
+    #detail h2{    
         font-family: 'Times New Roman', Times, serif;
         font-weight: 100;
         font-size: 17px;
@@ -79,8 +91,12 @@
 #second select{
     margin-top: 20px;
     height: 40px;
-    width: 40px;
+    width: 60px;
     margin-left: 30px;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration-color: rgb(119, 119, 197);
+
 }
 #second h3{
     margin-top: 30px;
@@ -108,7 +124,8 @@
 #Price{
     background-color:#e1c38f;
     /* width: 40%; */
-    margin-left: 17px;
+    margin-left: 130px;
+    margin-top: -25px;
     text-align: center; 
     /* border: 2px solid red;   */
     border-radius: 7px;
@@ -116,13 +133,18 @@
     width: 140px;
     height: 30px;
     text-align: center;
-
+    
 
 }
 #Price h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* margin-top: -.2px; */
     /* margin-left: -85px; */
+}
+#Price hr,#hori{
+    border-width: 8px;
+    border-color: #176D96;
 }
 
 #total_items{
@@ -168,30 +190,34 @@
 #od,#coupon h3,h2{
     margin-left: 20px;
     font-weight: 700;
-    font-family:'Times New Roman', Times, serif;
+    
     font-size: 20px;
     color: #333333;
     margin-top: 15px;
 }
+#od{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 #det1{
-    padding-left: 160px;
+    padding-left: 130px;
     font-weight: 400;
     font-family:'Times New Roman', Times, serif;
     
 }
 #det2{
-    padding-left: 127px;
+    padding-left: 100px;
     font-weight: 700;
     color:#D5a249;
 }
 #det3{
-    padding-left: 205px;
+    padding-left: 150px;
     color:#D5a249;
     font-weight: 700;
 }
 #det4{
-    padding-left: 90px;
+    padding-left: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #wallet{
     margin:25px 0px 25px 30px;
@@ -210,9 +236,12 @@
     background-color: #D5a249;
     padding: 15px 57px 15px 77px;
     border: none;
+    border-radius: 4px;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    width: 100%;
+    
 }
 
 /*cop*/
@@ -220,7 +249,7 @@
 
 
 
-#coupon p,input{
+#coup{
     
     margin-left: 20px;
 }
@@ -231,4 +260,18 @@
     color:#176D93;
     font-size: 17px;
     cursor: pointer;
+   
+   
  }
+
+ #btn1:nth-child(2){
+   
+    /* border: 2px solid red; */
+ }
+#couponCode{
+    margin-left: 20px;
+}
+
+#couponP{
+    margin-left: 20px;
+}

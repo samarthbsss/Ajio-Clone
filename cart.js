@@ -43,7 +43,7 @@ function display(data){
 var product=document.createElement("div");
 product.setAttribute("id","product")
 var div1=document.createElement("div");
-div1.setAttribute("id","details")
+div1.setAttribute("id","detail")
 var div2=document.createElement("div");
 
 var img=document.createElement("img");
@@ -62,27 +62,27 @@ size.name="Size";
 size.setAttribute("selected","selected disabled");
 var option1 = document.createElement("option");
 option1.value = "9";
-option1.text = "9";
+option1.text = "XXL";
 size.add(option1);
 
 var option2 = document.createElement("option");
 option2.value = "8";
-option2.text = "8";
+option2.text = "XL";
 size.add(option2);
 
 var option3 = document.createElement("option");
 option3.value = "7";
-option3.text = "7";
+option3.text = "L";
 size.add(option3);
 
 var option4 = document.createElement("option");
 option4.value = "6";
-option4.text = "6";
+option4.text = "M";
 size.add(option4);
 
 var option5 = document.createElement("option");
 option5.value = "5";
-option5.text = "5";
+option5.text = "S";
 size.add(option5);
  
 var qty=document.createElement("select")
@@ -142,7 +142,9 @@ size.add(option5);
  
  var price=document.createElement("h3")
  price.textContent="Rs "+(item.sales_price);
-div5.append(price);
+ var hr=document.createElement("hr");
+
+div5.append(price,hr);
 var div=document.createElement("div");
 div.setAttribute("id","anchor")
 
@@ -178,7 +180,8 @@ div.setAttribute("id","anchor")
 
  //
  
- var wish=document.createElement("a");
+ var wish=document.createElement("button");
+ wish.setAttribute("id","btn1")
 //  wish.innerHTML=<i class="fa-thin fa-heart"></i>
  wish.innerText="Move To Wishlist";
 div.append(del,wish);
