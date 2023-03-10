@@ -10,6 +10,9 @@ body{
     cursor: pointer;
   }
 
+  #data-men.grid-2cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 .card-div{
   width:100%;
@@ -180,4 +183,51 @@ text-transform: capitalize;
 #sidebar>div>div:hover{
   scale: 1.09;
   transition: 0.3s;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(206, 172, 172);
+  /* border-radius: 5px; */
+  border: 0.1px solid teal;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.button:first-of-type:before {
+  content: "||";
+  display: inline-block;
+  margin-right: 5px;
+  height: 90%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  padding-left: 5px;
+}
+
+.button:last-of-type:before {
+  content: "|||";
+  display: inline-block;
+  margin-right: 5px;
+  height: 90%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+#grid{
+  margin: auto;
+}
+
+.button:hover {
+  background-color: #575155;
 }

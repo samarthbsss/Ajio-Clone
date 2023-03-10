@@ -326,11 +326,11 @@ const products = [
 
 
 let id = localStorage.getItem("pop") ? localStorage.getItem("pop") : "";
-console.log(id);
+// console.log(id);
 
 const data =JSON.parse(id);
 
-console.log(JSON.parse(id));
+// console.log(JSON.parse(id));
 
 // s
 document.querySelector('title').innerHTML=data.company_name+" | "+data.description;
@@ -382,18 +382,33 @@ setInterval(function () {
 if (localStorage.getItem('CART') === null) {
   localStorage.setItem('CART', JSON.stringify([]))
 }
+if (localStorage.getItem('WISH') === null) {
+  localStorage.setItem('WISH', JSON.stringify([]))
+}
 
 function add() {
   document.getElementById('float').style.display = 'block'
   document.getElementById('blk').style.display = 'block'
-  var cart = []
+  let cart = []
   cart.push(data)
   let cart_data = JSON.parse(localStorage.getItem('CART'))
   cart_data.push(data)
   localStorage.setItem('CART', JSON.stringify(cart_data))
+  console.log(cart_data);
   setTimeout(function () {
     document.getElementById('float').style.display = 'none'
     document.getElementById('blk').style.display = 'none'
   }, 2000)
 }
+
+
+function wish(){
+  let wish=[];
+  wish.push(data)
+  let wishdata= JSON.parse(localStorage.getItem('WISH'))
+  wishdata.push(data);
+  localStorage.setItem('WISH',JSON.stringify(wishdata));
+  console.log(wishdata);
+}
+
 

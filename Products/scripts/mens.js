@@ -1,5 +1,6 @@
 const products = [
   { 
+    color:"grey",
     company_name: 'ROADSTER',
     description: 'Graphic Regular Fit Crew- Neck T-shirt',
     price: '330',
@@ -14,7 +15,8 @@ const products = [
  },
 
   {
-    id:2,
+    color:"blue",
+        id:2,
     company_name: 'DNMX',
     description: 'Mid-Rise Fitted Jeans',
     price: '679',
@@ -31,6 +33,7 @@ const products = [
     'https://assets.ajio.com/medias/sys_master/root/20210316/47fm/6050cc797cdb8c1f1464ef69/-473Wx593H-460601683-blue-MARKETING.jpg',
 },
   {
+    color:"yellow",
     id:3,
     company_name: "Indie Picks",
     description: "Cotton Dobby Short Kurta",
@@ -48,6 +51,7 @@ const products = [
     'https://assets.ajio.com/medias/sys_master/root/20210311/bqVi/604912097cdb8c1f145db484/-473Wx593H-460842258-mustard-MODEL7.jpg',
 },
   {
+    color:"black",
     id:4,
     company_name: "MUJI",
     description: "Cotton Washed Oxford Stand-Collar Shirt",
@@ -62,6 +66,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20201021/ppzA/5f8f31a2f997dd8c836ff14b/muji_blue_cotton_washed_oxford_stand-collar_shirt.jpg"
   },
   {
+    color:"blue",
     id:5,
     company_name: "DENNISLINGO PREMIUM ATTIRE",
     description: "Slim Fit Shirt with Patch Pocket",
@@ -79,6 +84,7 @@ const products = [
     'https://assets.ajio.com/medias/sys_master/root/20210403/Yf0g/60687031aeb269a9e33233f6/-473Wx593H-461135251-blue-MODEL3.jpg',
 },
   {
+    color:"blue",
     id:6,
     company_name: 'FRENCH COLLECTION',
     description: 'Columbia Lightly Washed Skinny Fit Jeans',
@@ -93,6 +99,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20210212/rYyF/6026a890f997dd5c40ef6cf7/-473Wx593H-460827661-ltblue-MODEL4.jpg'
   },
   {
+    color:"white",
     id:7,
     company_name: "Calvin Klein Jeans",
     description: "Slim Fit Shirt with Spread Collar",
@@ -107,6 +114,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20210525/J4i5/60ac3947f997ddb312a871e6/calvin_klein_jeans_grey_slim_fit_shirt_with_spread_collar.jpg"
   },
   {
+    color:"none",
     id:8,
     company_name: "MUJI",
     description: "Cotton Washed Oxford Stand-Collar Shirt",
@@ -121,6 +129,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20201021/ppzA/5f8f31a2f997dd8c836ff14b/muji_blue_cotton_washed_oxford_stand-collar_shirt.jpg"
   },
   {
+    color:"red",
     id:9,
     company_name: "DENNISLINGO PREMIUM ATTIRE",
     description: "Slim Fit Shirt with Patch Pocket",
@@ -135,6 +144,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20210403/dd2q/606867587cdb8c1f1475204d/dennislingo_premium_attire_purple_slim_fit_shirt_with_patch_pocket.jpg"
   },
   {
+    color:"red",
     id:10,
     company_name: "DENNISLINGO PREMIUM ATTIRE",
     description: "Band Collar Slim Fit Shirt",
@@ -149,6 +159,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20210403/ORxf/60691fd6aeb269a9e33ea526/dennislingo_premium_attire_purple_band_collar_slim_fit_shirt.jpg"
   },
   {
+    color:"white",
     id:11,
     company_name: "Bene Kleed",
     description: "Floral Print Slim Fit Shirt with Patch Pocket",
@@ -163,6 +174,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20210403/AU4p/60686d0d7cdb8c1f14758483/bene_kleed_beige_floral_print_slim_fit_shirt_with_patch_pocket.jpg"
   },
   {
+    color:"blue",
     id:12,
     company_name: 'IVOC',
     description: 'Mid-Rise Jogger Jeans with Zip Pocket',
@@ -177,6 +189,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20210403/ntpG/606864cb7cdb8c1f1474f297/-473Wx593H-461094398-blue-MODEL6.jpg'
   },
   {
+    color:"orange",
     id:13,
     company_name: "Indie Picks",
     description: "Mandarin-Collar South-Cotton Kurta",
@@ -191,6 +204,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20200918/FRiX/5f63c2cff997dd8c8341f4ab/indie_picks_orange_mandarin-collar_south-cotton_kurta.jpg"
   },
   {
+    color:"cream",
     id:14,
     company_name: 'DENNISLINGO PREMIUM ATTIRE',
     description: 'Full Sleeves Slim Fit Classic Shirt',
@@ -205,6 +219,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20210428/D6Ix/60897dc6f997dd7b64c7767b/-473Wx593H-462323964-pink-MODEL5.jpg'
   },
   {
+    color:"white",
     id:15,
     company_name: 'DENNISLINGO PREMIUM ATTIRE',
     description: 'Full Sleeves Slim Fit Shirt',
@@ -219,6 +234,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20210420/opz8/607ecd0df997dd7b64b802f5/-473Wx593H-462323964-white-MODEL7.jpg'
   },
   {
+    color:"yellow",
     id:16,
     company_name: "NETPLAY",
     description: "Slim Fit Shirt with Patch Pocket",
@@ -233,6 +249,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/had/hee/15130607321118/netplay_yellow_slim_fit_shirt_with_patch_pocket.jpg"
   },
   {
+    color:"white",
     id:17,
     company_name: "GLITO",
     description: "Colourblock Slim Fit Shirt",
@@ -247,6 +264,7 @@ const products = [
     poster5: "https://assets.ajio.com/medias/sys_master/root/20210403/8mWH/60688ecaaeb269a9e3346e03/glito_white_colourblock_slim_fit_shirt.jpg"
   },
   {
+    color:"blue",
     id:18,
     company_name: 'THE INDIAN GARAGE CO',
     description: 'Checked Slim Fit Shirt with Patch Pocket',
@@ -261,6 +279,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20200902/a63Y/5f4e9fc8f997dd6918b21746/-473Wx593H-460698898-navy-MODEL5.jpg'
   },
   {
+    color:"blue",
     id:19,
     company_name: 'THE INDIAN GARAGE CO',
     description: 'Checked Slim Fit Shirt with Patch Pocket',
@@ -275,6 +294,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20200821/WLLF/5f3fe70bf997dd2277a34960/-473Wx593H-460698915-navy-MODEL5.jpg'
   },
   {
+    color:"red",
     id:20,
     company_name: 'DENNISLINGO PREMIUM ATTIRE',
     description: 'Slim Fit Shirt with Spread Collar',
@@ -289,6 +309,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20210420/PdwT/607eccfeaeb269a9e397297e/-473Wx593H-462323964-purple-MODEL7.jpg'
   },
   {
+    color:"black",
     id:21,
     company_name: 'PERFORMAX',
     description: 'Panelled Track Pants with Elasticated Drawstring Waist',
@@ -303,6 +324,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/20200919/5BhS/5f64ff48aeb269d563c55e48/-473Wx593H-440971924-jetblack-MODEL6.jpg'
   },
   {
+    color:"blue",
     id:22,
     company_name: 'PERFORMAX',
     description: 'Panelled Track Pants with Elasticated Drawstring Waist',
@@ -317,6 +339,7 @@ const products = [
     poster5: 'https://assets.ajio.com/medias/sys_master/root/he5/haa/13989401624606/-473Wx593H-440971924-teal-MODEL5.jpg'
   },
   {
+    color:"black",
      id:23,
     company_name: 'TEAMSPIRIT',
     description: 'Heathered Track Pants with Contrast Taping',
@@ -405,6 +428,7 @@ function displayproducts(products){
         div.append(imagebox,brandbox, pricebox);
         document.querySelector("#data-men").append(div);
         console.log(ele);
+        // document.getElementById("countSpan").innerHTML=products.length;
      })
 }
 
@@ -481,4 +505,9 @@ function sortvalue(){
       products.sort(function(){return 0.5 - Math.random()});
       displayproducts(products);
     }
+}
+
+const dataMen = document.getElementById('data-men');
+function twogrid(){
+  dataMen.classList.toggle('grid-2cols');
 }

@@ -11,7 +11,7 @@
     ></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
@@ -143,8 +143,14 @@
         <p>Sway your way through life with AJIO’s collection of fabulous dresses. Be it for your everyday wear, your clubbing nights or for your corporate chic looks, AJIO has just the right selection of dresses for women to make the right statement. Browse through and get bewitched!</p>
       </div>
       <div id="sortbar">
-        <div id="count">Items Found:<span></span></div>
-        <div id="grid-container">Grid:</div>
+        <!-- <div id="count">Items Found:<span id="countSpan">&nbsp;</span></div> -->
+        <div id="grid-container">Grid:
+          &nbsp; &nbsp;
+          <a href="#" class="button" onclick="twogrid()"></a>
+          &nbsp;
+          <a href="#" class="button" onclick="myFunction()"></a>
+        </body>
+        </div>
         <div id="sort">
             <p>Sort</p>
           <select name="" id="sortit" onchange="sortvalue()">
@@ -162,7 +168,7 @@
 
       
     </div>
-    <div id="data-men">
+    <div id="data-men" class="grid-3cols">
      
     </div>
   </body>
