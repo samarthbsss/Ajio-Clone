@@ -9,8 +9,13 @@
     <title>Payment</title>
     <link rel="stylesheet" href="css/payment.css">
     <link rel="stylesheet" type="text/css" href="payment.css" />
+    <link rel="stylesheet" href="Products/styles/navbar.css">
 </head>
+
   <body>
+
+    <div id="nav-bar"></div>
+  
     <div class="header-container">
         <header>
             <div class="logo-box">
@@ -244,8 +249,8 @@
 
         <!----------------------- LEFT  ------------------------>
 
-        <div class="left">
-            <div class="order-summary">
+        <!-- <div class="left"> -->
+            <!-- <div class="order-summary">
                 <div>Order Summary</div>
                 <div class="summary-amount">
                     <div>Bag Total</div>
@@ -263,13 +268,28 @@
                     <div>Amount Payable</div>
                     <div id="amount-payable">Rs. 0</div>
                 </div>
+            </div> -->
+       
+        <div id="order">
+            <div id="bill">
+                
+                <h4 id="od">Order Details </h4>
+                <br>
+                <p id="ord">Bag Total <span id="det1"></span></p> 
+                <br>
+                <p id="ord">Bag Discount <span id="det2"></span></p>
+                <br>
+                <!-- <p>Delivery <span id="det3"></span></p> -->
+                <h4 id="od">Order Total<span id="det4"></span></h4>
+                <br>
+              <button id='btn'>  PROCEED TO SHIPPING </button>
+              <hr id="hori">
             </div>
         </div>
-
         <!--------------------- LEFT ENDS ------------------->
     </div>
     <footer>
-        <div><img style="min-width:1263px; width: 100%;" src="images/stripe/above-footer.png" alt=""></div>
+        <!-- <div><img style="min-width:1263px; width: 100%;" src="images/stripe/above-footer.png" alt=""></div>
         <div id="payment">
             <div id="payment_method">
                 <div class="pay_title">
@@ -304,7 +324,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script>
         
 function showMethod(box,method){
@@ -374,6 +394,7 @@ function showMethod(box,method){
    
    summary_amount();
     </script>
+    <script src="Products/components/navbar.js"></script>
 </body>
 
 </html>

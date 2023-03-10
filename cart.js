@@ -119,9 +119,9 @@ option5.value = "5";
 option5.text = "5";
 size.add(option5);
  var saving=document.createElement("h2");
- saving.textContent="Saving : ₹ "+(100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
+ saving.textContent="Saving : ₹ "+((3.33*(parseInt(item.price))-item.price)).toFixed(2);
  var stripped_price=document.createElement("h2")
- stripped_price.textContent="Rs " +(item.price*item.discount).toFixed(2);
+ stripped_price.textContent="Rs " +(((100-item.discount)/10*(parseInt(item.price)))).toFixed(2);
  
 
 
@@ -130,9 +130,9 @@ size.add(option5);
  saving.textContent="Saving : ₹ "+pr.toFixed(2);
  stripped_price.textContent="Rs " +((qty.value)*((parseInt(item.discount)/10)*parseInt(item.price))).toFixed(2);
 
- price.textContent="Rs "+((qty.value)*(item.sales_price)).toFixed(2);
+ price.textContent="Rs "+((qty.value)*(item.price)).toFixed(2);
 
- det2.textContent="₹ -"+ ((qty.value)*(disc)).toFixed(2);
+ det2.textContent="₹ -"+ (100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
 
 
  bagTotal.textContent="₹ "+((qty.value)*(Total)).toFixed(2)
@@ -149,10 +149,10 @@ size.add(option5);
  div5.setAttribute("id","Price");
  
  var price=document.createElement("h3")
- price.textContent="Rs "+(item.sales_price);
- var hr=document.createElement("hr");
+ price.textContent="Rs "+(item.price);
+//  var hr=document.createElement("hr");
 
-div5.append(price,hr);
+div5.append(price);
 var div=document.createElement("div");
 div.setAttribute("id","anchor")
 
@@ -204,16 +204,26 @@ div3.append(div1,div);
 div1.append(title,Size,size,Qty,qty);
 product.append(div2,div3,div4)
 var det2=document.getElementById("det2");
-disc=+((parseInt(item.stripped_price)-parseInt(item.price))).toFixed(2);
+disc=+(3.33*(parseInt(item.price))-item.price).toFixed(2);
 det2.textContent="₹ -"+ disc.toFixed(2);
 
 var bagTotal=document.getElementById("det1");
-Total+=parseInt(item.stripped_price)
+Total+=parseInt((qty.value)*(item.price));
 bagTotal.textContent="₹ "+Total.toFixed(2);
 
 totalAmt+=parseFloat(Total-disc);
 document.getElementById("det4").textContent="₹ "+totalAmt.toFixed(2);
-document.getElementById("products").append(product);});}
+document.getElementById("products").append(product);});
+
+
+
+
+btn.onclick=function(){
+  var data={
+    bagTotal:bagTotal,
+    bagDiscount:disc,
+  }
+  }}
 
 
 document.getElementById("total_items").innerText="("+Data.length +" Items)";
@@ -221,4 +231,12 @@ document.getElementById("total_items").innerText="("+Data.length +" Items)";
 
 
 
-
+var Data1=[];
+btn.onclick=function(){
+var data={
+  bagTotal:bagTotal,
+  bagDiscount:disc,
+}
+}
+localStorage.setItem("bag",Data1);
+console.log(Data1);
