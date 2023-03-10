@@ -1,0 +1,28 @@
+#body {
+  width: 100%;
+}
+
+#body img {
+  width: 100%;
+}
+
+#carrousel_7 {
+  display: flex;
+}
+
+#bottom_icons {
+  display: flex;
+}
+
+.carousel-inner {
+  display: flex;
+}
+#firstCarouselWithControl{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ #firstCarouselWithControl img{
+  width: 100%;
+}

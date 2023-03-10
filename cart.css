@@ -1,0 +1,234 @@
+
+#header{
+    /* border: 2px solid red; */
+
+}
+
+
+#products{
+    /* border: 2px solid red; */
+    height:600px;
+    margin-right: 400px;
+    margin-left: 30px;
+    /* display: flex; */
+  gap: 10px;
+  width: 88%;
+ 
+}
+#product{
+    display: flex;
+    height: 200px;
+    border: 0.005px solid rgb(200, 193, 193);
+    border-radius: 7px;
+    gap: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+#anchor{
+    margin-top: 160px;
+    margin-right: 0px;
+    /* padding-left: 90px; */
+    /* border: 2px solid rgb(216, 208, 98); */
+    gap: 20px;
+    width: 80%;
+    display: flex;
+}
+#first {
+    width: 20%;
+    /* border: 2px solid black; */
+    gap: 10px;
+}
+#first img{ 
+    width: 80%;
+    height: 90%;
+    margin-top: 8px;
+    margin-left: 5px;
+    image: resolution 1px; ;
+}
+#second{
+    /* border: 2px solid rgb(232, 11, 11); */
+    display: block;
+    width: 690px;
+}
+#details{
+    display: flex;
+    /* border: 2px solid rgb(11, 232, 96); */
+    font-size: 14px;
+    color: #333333;
+    width: 115%;
+    margin-left: -20px;
+
+}
+
+    #details h2{    
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 100;
+        font-size: 17px;
+       margin-top:30px;
+    }
+
+#anchor{
+    /* border: 2px solid rgb(232, 11, 11); */
+    margin-top: 80px;
+    width: 200px;
+    margin-left: 450px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#176D93;
+}
+#second select{
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+}
+#second h3{
+    margin-top: 30px;
+}
+#third{
+    /* border: 2px solid red; */
+    margin-left: -200px;
+    font-size: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 150px;
+    
+}
+
+#third h2:nth-child(2){
+    text-decoration: line-through;
+    color: #B09975;
+
+}
+
+#third h2{
+    /* border: 2px solid black; */
+    width: 200px;
+
+}
+#Price{
+    background-color:#e1c38f;
+    /* width: 40%; */
+    margin-left: 17px;
+    text-align: center; 
+    /* border: 2px solid red;   */
+    border-radius: 7px;
+    font-size: 15px;
+    width: 140px;
+    height: 30px;
+    text-align: center;
+
+
+}
+#Price h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* margin-top: -.2px; */
+    /* margin-left: -85px; */
+}
+
+#total_items{
+    color: #333333;
+}
+
+#order{
+    /* border: 2px solid green  ; */
+   margin-left: -400px;
+   width: 410px;
+   border-radius: 7px;
+}
+
+
+
+#container1 {
+    /* border: 5px solid black; */
+    display: flex;
+    }
+#bill,#coupon{
+            background-color: #fafafa;
+        padding: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 7px;
+        border: 0.05px solid gray;
+      
+}
+
+#bill p{
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: 20px;
+    color: #938b8b;
+    font-size-adjust:unset
+ }
+
+ /* #order span{ */
+    /* border: 2px solid red; */
+    
+ /* }  */
+
+#od,#coupon h3,h2{
+    margin-left: 20px;
+    font-weight: 700;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #333333;
+    margin-top: 15px;
+}
+
+#det1{
+    padding-left: 160px;
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+#det2{
+    padding-left: 127px;
+    font-weight: 700;
+    color:#D5a249;
+}
+#det3{
+    padding-left: 205px;
+    color:#D5a249;
+    font-weight: 700;
+}
+#det4{
+    padding-left: 90px;
+}
+#wallet{
+    margin:25px 0px 25px 30px;
+    background-color: #FEFBE4;
+    padding:10px;
+    color:#176D96;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+#bill h4{
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+#btn{
+    background-color: #D5a249;
+    padding: 15px 57px 15px 77px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*cop*/
+
+
+
+
+#coupon p,input{
+    
+    margin-left: 20px;
+}
+ #btn1{
+    background: none;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#176D93;
+    font-size: 17px;
+    cursor: pointer;
+ }
