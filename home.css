@@ -17,12 +17,89 @@
 .carousel-inner {
   display: flex;
 }
-#firstCarouselWithControl{
+#CarouselWithControl{
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
- #firstCarouselWithControl img{
+ #CarouselWithControl img{
   width: 100%;
+}
+#body img:hover{
+  transform: scale(1.03, 1.03);
+  transition: 1s;
+}
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 60px; 
+  right: 18px;
+  z-index: 99;
+  border: none;
+  outline: none; 
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 15px; 
+  border-radius: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#goToTopBtn:hover{
+  background-color:lightgray ;
+}
+#categories{
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 18px;
+  bottom: 10px;
+  z-index: 99;
+  border: none;
+  outline: none; 
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 15px; 
+  border-radius: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#categories:hover{
+  background-color:lightgray ;
+}
+i{
+  width: 100%;
+}
+#popUp {
+  display: none;
+  background-color: #fff;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 50px;
+  width : 90%;
+  height : 600px;
+  margin: auto;
+  margin-left: 25px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#popUp img{
+  width: 200px;
+  margin-top: 40px;
+}
+#popUp button{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  position: relative;
+  margin-left: 1150px;
 }
