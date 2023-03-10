@@ -1,36 +1,40 @@
-var Data=[{
-    img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-    title:"DENNISLINGO PREMIUM ATTIRE",
-    det:"Striped Slim Fit Shirt",
-    price:"675.00",
-    stripped_price:"2899.00",
-    off:"(73% off)",
-    sales_price:"600.00"
-},{
-    img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-    title:"DENNISLINGO PREMIUM ATTIRE",
-    det:"Striped Slim Fit Shirt",
-    price:"599.00",
-    stripped_price:"2990.00",
-    off:"(73% off)",
-    sales_price:"900.00"
-},{
-    img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-    title:"DENNISLINGO PREMIUM ATTIRE",
-    det:"Striped Slim Fit Shirt",
-    price:"675.00",
-    stripped_price:"2899.00",
-    off:"(73% off)",
-    sales_price:"600.00"
-},{
-    img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-    title:"DENNISLINGO PREMIUM ATTIRE",
-    det:"Striped Slim Fit Shirt",
-    price:"599.00",
-    stripped_price:"2990.00",
-    off:"(73% off)",
-    sales_price:"900.00"
-}]
+// var Data=[{
+//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
+//     title:"DENNISLINGO PREMIUM ATTIRE",
+//     det:"Striped Slim Fit Shirt",
+//     price:"675.00",
+//     stripped_price:"2899.00",
+//     off:"(73% off)",
+//     sales_price:"600.00"
+// },{
+//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
+//     title:"DENNISLINGO PREMIUM ATTIRE",
+//     det:"Striped Slim Fit Shirt",
+//     price:"599.00",
+//     stripped_price:"2990.00",
+//     off:"(73% off)",
+//     sales_price:"900.00"
+// },{
+//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
+//     title:"DENNISLINGO PREMIUM ATTIRE",
+//     det:"Striped Slim Fit Shirt",
+//     price:"675.00",
+//     stripped_price:"2899.00",
+//     off:"(73% off)",
+//     sales_price:"600.00"
+// },{
+//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
+//     title:"DENNISLINGO PREMIUM ATTIRE",
+//     det:"Striped Slim Fit Shirt",
+//     price:"599.00",
+//     stripped_price:"2990.00",
+//     off:"(73% off)",
+//     sales_price:"900.00"
+// }]
+
+let Data=JSON.parse(localStorage.getItem('CART')||[]);
+
+console.log(Data);
 
 display(Data);
 // fetching data from local storage//
@@ -48,11 +52,11 @@ div1.setAttribute("id","detail")
 var div2=document.createElement("div");
 
 var img=document.createElement("img");
-img.src=item.img;
+img.src=item.poster;
 div2.append(img);
 div2.setAttribute("id","first")
 var title=document.createElement("h2");
-title.textContent=item.title;  
+title.textContent=item.description;  
 
 
 //  pro= event.target.parentNode;

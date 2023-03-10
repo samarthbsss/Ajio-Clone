@@ -70,7 +70,7 @@ let footer = `<div id="main-footer">
                 </div>
                 <div id="right">
                     <div class="headline">Secure systems</div>
-                    <img src="Icons/icon-5.png" alt="Encription">
+                    <img src="" alt="Encription">
                 </div>
             </div>
         </div>
