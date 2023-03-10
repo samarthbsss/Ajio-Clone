@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ajio clothing</title>
+    <title>Men's Clothing | Ajio clothing</title>
     <script
       src="https://kit.fontawesome.com/32979f5c51.js"
       crossorigin="anonymous"
     ></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
@@ -28,11 +29,19 @@
   <body>
     <div id="nav-bar"></div>
 
+    <div id="salediv">
+      <!-- id="sort" -->
+      <img src="https://assets.ajio.com/cms/AJIO/MOBILE/LOGO1.png" loading="auto" class="" alt="price-reveal" data-test-id="">
+      <div id="allstarsale">All Star Sale is Live!</div><span>&nbsp;&nbsp;</span><span>|</span><span>&nbsp;&nbsp;</span>
+      <div id="jawdropin">Buy your favorite products at jaw-dropping discounts!</div>
+    </div>
+
     <div id="sidebar">
+      <button class="clear-all-button" onclick="myFunction()">Clear</button>
       <div id="refine" onclick="hide()">
         <p>Refine By<span>&nbsp;&nbsp;+</span></p>
       </div>
-      <div id="dropdown">
+      <div id="drop">
         <div id="gender">
           <p><span onclick="genderhide()">+&nbsp;&nbsp;</span>Gender</p>
           <div id="gender-contain">
@@ -52,94 +61,79 @@
               value="women"
             />
             <span class="gender-women">Women</span><br />
+            <br />
+            <hr />
             <hr />
           </div>
         </div>
-        <div id="price">
-          <p><span onclick="pricehide()">+&nbsp;&nbsp;</span>Brand</p>
-          <div id="price-contain">
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Male</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Male</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Male</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Male</span> <br />
-            <hr />
-          </div>
-        </div>
+       
         <div id="color">
           <p><span onclick="colorhide()">+&nbsp;&nbsp;</span>Color</p>
           <div id="color-contain">
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Red</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Black</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">White</span> <br />
-            <span>&nbsp;&nbsp;</span
-            ><input
-              type="checkbox"
-              id="men-filter"
-              name="men-filter"
-              value="men"
-            />
-            <span class="@">Yellow</span> <br />
+            <span>&nbsp;&nbsp;</span> 
+            <input type="checkbox" class="checkbox" id="white"  value="white">  <span class="brand_space">White</span><br>
+            <span>&nbsp;&nbsp;</span> 
+            <input type="checkbox" class="checkbox" id="black" value="black">  <span class="brand_space">Black</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <input type="checkbox" class="checkbox" id="green" value="blue">  <span class="brand_space">Blue</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <input type="checkbox" class="checkbox"id="grey" value="yellow">  <span class="brand_space">Yellow</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <input type="checkbox" class="checkbox"id="red" value="red">  <span class="brand_space">Red</span><br><br><hr>
+            <hr />
+          </div>
+        </div>
+        <div id="brandbox">
+          <p><span onclick="brandhide()">+&nbsp;&nbsp;</span>Brands</p>
+          <div id="brand-contain">
+            <span>&nbsp;&nbsp;</span> 
+            <input type="checkbox" class="checkbox" id="white"  value="ROADSTER">  <span class="brand_space">Roadster</span><br>
+            <span>&nbsp;&nbsp;</span> 
+            <input type="checkbox" class="checkbox" id="black" value="THE INDIAN GARAGE CO">  <span class="brand_space">The Indian Co</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <input type="checkbox" class="checkbox" id="green" value="DNMX">  <span class="brand_space">DNMX</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <input type="checkbox" class="checkbox"id="grey" value="Indie Picks">  <span class="brand_space">Indie Picks</span><br>
+            <span>&nbsp;&nbsp;</span>
+            <hr>
+            <hr/>
+          </div>
+        </div>
+        <div id="price">
+          <p><span onclick="pricehide()">+&nbsp;&nbsp;</span>Price</p>
+          <div id="price-contain">
+            <input type="checkbox" class="check_box" id="10" value="10"> <span class="brand_space">10% and above</span><br>
+            <input type="checkbox" class="check_box" id="20" value="20"> <span class="brand_space">20% and above</span><br>
+            <input type="checkbox" class="check_box" id="30" value="30"> <span class="brand_space">30% and above</span><br>
+            <input type="checkbox" class="check_box"id="40" value="40"> <span class="brand_space">40% and above</span><br>
+            <input type="checkbox" class="check_box" id="50" value="50"> <span class="brand_space">50% and above</span><br><br>
+            <hr />
             <hr />
           </div>
         </div>
       </div>
     </div>
     <div id="contain">
-      <div id="info">Men's Product</div>
+     
+
+      <div id="info">
+        <h1> Men's Product</h1>
+       
+        <p>Sway your way through life with AJIO’s collection of fabulous dresses. Be it for your everyday wear, your clubbing nights or for your corporate chic looks, AJIO has just the right selection of dresses for women to make the right statement. Browse through and get bewitched!</p>
+      </div>
+      
+      
       <div id="sortbar">
-        <div id="count">Items Found:<span></span></div>
-        <div id="grid-container">Grid:</div>
+        <!-- <div id="count">Items Found:<span id="countSpan">&nbsp;</span></div> -->
+        <div id="grid-container">GRID:
+          &nbsp; &nbsp;
+          <a href="#" class="button" onclick="twogrid()"></a>
+          &nbsp;
+          <a href="#" class="button" onclick="myFunction()"></a>
+        </body>
+        </div>
         <div id="sort">
-            <p>Sort</p>
+            <p >SORT :</p><span>&nbsp;&nbsp;</span>
           <select name="" id="sortit" onchange="sortvalue()">
             <option value="SbyR" class="rec">
               &nbsp; &nbsp;sort: by Recommended
@@ -151,11 +145,14 @@
             <option value="lth">&nbsp; &nbsp;Price: Low to High</option>
           </select>
         </div>
+       
       </div>
+  
 
-      <div id="data-men">
-        <!-- <h1>Data</h1>; -->
-      </div>
+      
+    </div>
+    <div id="data-men" class="grid-3cols">
+     
     </div>
   </body>
 </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <title>Sign Up</title>
+    
+</head>
+<body>
+    <!-- main box -->
+    <div id = "main">
+        <p class = "head">Welcome to AJIO</p>
+        <h5>Join/Sign In using</h5>
+
+        <!-- media box -->
+        <div id = "logobox">
+
+            <!-- fb box -->
+            <div class = "boxes" id = "fb">
+                <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+                <h4 id = "social">FACEBOOK</h4>
+            </div>
+
+            <div>
+                <!-- google box -->
+                <div class = "boxes" id = "google">
+                    <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                    <h4 id = "social">GOOGLE</h4>
+                </div>
+            </div> 
+        </div>
+
+        <div id = "line">
+            <div><hr></div>Or
+            <div><hr></div>
+        </div>
+         
+        <!-- Input Feilds -->
+        <div class="container">
+            <!-- <label>Enter Name</label><br> -->
+            <input class="input" id="name" type="text" placeholder="Enter Name"><br><br>
+
+            <!-- <label>Enter Email</label><br> -->
+            <input class="input" id="email" type="text" placeholder="Enter Email"><br><br>
+
+            <!-- <label>Enter Password</label><br> -->
+            <input class="input" id="password" type="password" placeholder="Enter Password"><br><br>
+
+            <!-- <label>Enter Mobile</label><br> -->
+            <input class="input" id="mobile" type="tel" placeholder="Enter Mobile"><br><br>
+            <span class="border"></span>
+           </div>
+
+           <!-- submit Button -->
+           <div id = "btn1">
+            <button  onclick="signUp()" id = "btn">CONTINUE</button>
+            <a onclick="LoginUp()"><button id = "btn">LOG-IN</button></a>
+           </div>
+           <!-- <button  onclick="signUp()" id = "btn">CONTINUE</button> -->
+
+           <!-- Terms & Cond. -->
+           <p class = "p">By Signing In, I agree to<span id = "color">Terms and Conditions.</span> </p>
+           <!-- <button id = "btn">LogIn</button> -->
+    </div>
+</body>
+</html>
+<script>
+async function signUp(){
+        let name= document.getElementById("name").value
+        let email= document.getElementById("email").value
+        let password= document.getElementById("password").value
+        let mobile= document.getElementById("mobile").value
+        if(name.length === 0) return alert("Please enter a name")
+        if(email.length === 0) return alert("Please enter a email")
+        if(password.length === 0) return alert("Please enter a password")
+    let detail = {
+        name,
+        email,
+        password,
+        mobile,
+    }
+    detail = JSON.stringify(detail);
+    try{
+    let response = await fetch(url, {
+        method:"POST",
+        body: detail,
+        headers:{
+            "Content-Type": "application/json"
+        }
+    });
+    let data = await response.json();
+    
+    if(data.error === true){
+        alert(data.message);
+    } else if (data.va === true){
+        alert(data.errors[0].msg);
+    }
+    else{
+        window.location.href = "/user/login"
+    }
+} catch(e){
+    // alert("Fill Details");
+}
+    
+}
+function LoginUp() {
+    let name= document.getElementById("name").value
+        let email= document.getElementById("email").value
+        let password= document.getElementById("password").value
+        let mobile= document.getElementById("mobile").value
+        if(name.length === 0 && email.length === 0) {
+            window.location.href = "/user/login"
+        }else {
+            signUp()
+        }
+       
+        
+}
+</script>

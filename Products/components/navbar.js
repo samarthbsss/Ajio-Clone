@@ -569,18 +569,18 @@
         </div>
       </div>`;
 //   }
-//   var abb = [];
-//   function cato(arr) {
-//     console.log(5);
-//     var len = abb.length;
-//     if (len != 0) {
-//       abb = [];
-//     }
-//     abb.push(arr);
-//     let ABB = JSON.stringify(abb);
-//     localStorage.setItem("CATO", ABB);
-//     window.open("dummy.html");
-//   }
+  // var abb = [];
+  // function cato(arr) {
+  //   console.log(5);
+  //   var len = abb.length;
+  //   if (len != 0) {
+  //     abb = [];
+  //   }
+  //   abb.push(arr);
+  //   let ABB = JSON.stringify(abb);
+  //   localStorage.setItem("CATO", ABB);
+  //   window.open("mens.html");
+  // }
   
 document.getElementById('nav-bar').innerHTML = nav;
 //   export default navbar;
