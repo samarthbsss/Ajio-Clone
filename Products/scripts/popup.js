@@ -326,16 +326,17 @@ const products = [
 
 
 let id = localStorage.getItem("pop") ? localStorage.getItem("pop") : "";
-console.log(id);
 
 const data =JSON.parse(id);
 
-console.log(JSON.parse(id));
+document.querySelector('title').innerHTML=data.company_name+" | "+data.description;
 
-// s
 
-document.getElementById('name').innerHTML = data.company_name;
-
+document.getElementById('brand').innerHTML=data.company_name;
+document.getElementById('name').innerHTML = data.description;
+document.getElementById('price').innerHTML="Rs."+data.price;
+document.getElementById('str').innerHTML=data.original_price;
+document.getElementById('per').textContent="("+data.discount+"%off)";
 var IMG1 = document.getElementById('AA')
 var aI = document.createElement('img')
 aI.src = data.poster;
@@ -374,21 +375,36 @@ setInterval(function () {
 }, 4000)
 
 
-// if (localStorage.getItem('CART') === null) {
-//   localStorage.setItem('CART', JSON.stringify([]))
-// }
+if (localStorage.getItem('CART') === null) {
+  localStorage.setItem('CART', JSON.stringify([]))
+}
+if (localStorage.getItem('WISH') === null) {
+  localStorage.setItem('WISH', JSON.stringify([]))
+}
 
-// function add() {
-//   document.getElementById('float').style.display = 'block'
-//   document.getElementById('blk').style.display = 'block'
-//   var cart = []
-//   cart.push(J[0])
-//   let cart_data = JSON.parse(localStorage.getItem('CART'))
-//   cart_data.push(J[0])
-//   localStorage.setItem('CART', JSON.stringify(cart_data))
-//   setTimeout(function () {
-//     document.getElementById('float').style.display = 'none'
-//     document.getElementById('blk').style.display = 'none'
-//   }, 2000)
-// }
+function add() {
+  document.getElementById('float').style.display = 'block'
+  document.getElementById('blk').style.display = 'block'
+  let cart = []
+  cart.push(data)
+  let cart_data = JSON.parse(localStorage.getItem('CART'))
+  cart_data.push(data)
+  localStorage.setItem('CART', JSON.stringify(cart_data))
+  console.log(cart_data);
+  setTimeout(function () {
+    document.getElementById('float').style.display = 'none'
+    document.getElementById('blk').style.display = 'none'
+  }, 2000)
+}
+
+
+function wish(){
+  let wish=[];
+  wish.push(data)
+  let wishdata= JSON.parse(localStorage.getItem('WISH'))
+  wishdata.push(data);
+  localStorage.setItem('WISH',JSON.stringify(wishdata));
+  console.log(wishdata);
+}
+
 
