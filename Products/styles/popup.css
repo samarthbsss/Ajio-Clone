@@ -587,13 +587,13 @@
       position: absolute;
       width: 300px;
       height: 100px;
-border: 1px solid grey;
-background-color: white;
+border: none;
+background-color: rgba(255, 255, 255, 0.688);
       top: 40%;
       left: 45%;
       z-index: 6;
       border-radius: 15px;
-  }
+  } 
   #float>div{
     display: flex;
     justify-content: center;
