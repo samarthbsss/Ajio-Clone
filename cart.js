@@ -34,7 +34,7 @@
 
 let Data=JSON.parse(localStorage.getItem('CART')||[]);
 
-console.log(Data);
+// console.log(Data); 
 
 display(Data);
 // fetching data from local storage//
@@ -135,7 +135,7 @@ size.add(option5);
  det2.textContent="₹ -"+ (100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
 
 
- bagTotal.textContent="₹ "+((qty.value)*(Total)).toFixed(2)
+ bagTotal.textContent="₹ "+Math.abs(((qty.value)*(Total)).toFixed(2));
 
  document.getElementById("det4").textContent="₹ "+((qty.value)*(totalAmt)).toFixed(2);
 
@@ -218,12 +218,12 @@ document.getElementById("products").append(product);});
 
 
 
-btn.onclick=function(){
-  var data={
-    bagTotal:bagTotal,
-    bagDiscount:disc,
-  }
-  }}
+// btn.onclick=function(){
+//   var data1={}
+//   data1.push()
+    
+//   console.log(data1);
+//   }}
 
 
 document.getElementById("total_items").innerText="("+Data.length +" Items)";
@@ -231,12 +231,12 @@ document.getElementById("total_items").innerText="("+Data.length +" Items)";
 
 
 
-var Data1=[];
-btn.onclick=function(){
-var data={
-  bagTotal:bagTotal,
-  bagDiscount:disc,
-}
-}
-localStorage.setItem("bag",Data1);
-console.log(Data1);
+// var Data1=[];
+// btn.onclick=function(){
+// var data={
+//   bagTotal:bagTotal,
+//   bagDiscount:disc,
+// }
+// }
+// localStorage.setItem("bag",Data1);
+// console.log(Data1);
