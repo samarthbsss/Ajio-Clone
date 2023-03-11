@@ -65,6 +65,7 @@ const addtocart=document.createElement('button');
 addtocart.setAttribute("class","addtocart")
 addtocart.onclick=
 function(){
+    
     let cart=[];
     cart.push(data[i])
     console.log(cart);
@@ -72,6 +73,8 @@ function(){
     cartdata.push(Data);
     localStorage.setItem('CART',JSON.stringify(cartdata));
     console.log(cartdata);
+    alert("Item added to cart");
+  
 }
 addtocart.innerHTML="Add to Bag";
 

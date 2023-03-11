@@ -1,10 +1,10 @@
 let footer = `<div id="main-footer">
         <div id="footer-top">
-            <img src="Icons/icon-1.png"
+            <img src="icon-1.png"
                 alt="Easy Exchange">
-            <img src="Icons/icon-2.png"
+            <img src="icon-2.png"
                 alt="Hand Picked">
-            <img src="Icons/icon-3.png"
+            <img src="icon-3.png"
                 alt="Assured Quality">
         </div>
         <div id="footer-content">
@@ -65,12 +65,12 @@ let footer = `<div id="main-footer">
             <div id="lower">
                 <div id="left">
                     <div class="headline">Payment methods</div>
-                    <img src="Icons/icon-4.png"
+                    <img src="icon-4.png"
                         alt="Payment Methods">
                 </div>
                 <div id="right">
                     <div class="headline">Secure systems</div>
-                    <img src="" alt="Encription">
+                    <img src="icon-5.png" alt="Encription">
                 </div>
             </div>
         </div>

@@ -1,40 +1,12 @@
-// var Data=[{
-//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-//     title:"DENNISLINGO PREMIUM ATTIRE",
-//     det:"Striped Slim Fit Shirt",
-//     price:"675.00",
-//     stripped_price:"2899.00",
-//     off:"(73% off)",
-//     sales_price:"600.00"
-// },{
-//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-//     title:"DENNISLINGO PREMIUM ATTIRE",
-//     det:"Striped Slim Fit Shirt",
-//     price:"599.00",
-//     stripped_price:"2990.00",
-//     off:"(73% off)",
-//     sales_price:"900.00"
-// },{
-//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-//     title:"DENNISLINGO PREMIUM ATTIRE",
-//     det:"Striped Slim Fit Shirt",
-//     price:"675.00",
-//     stripped_price:"2899.00",
-//     off:"(73% off)",
-//     sales_price:"600.00"
-// },{
-//     img:"https://assets.ajio.com/medias/sys_master/root/20221117/2r8w/6375d715aeb269659c97f84a/-473Wx593H-462152986-green-MODEL.jpg",
-//     title:"DENNISLINGO PREMIUM ATTIRE",
-//     det:"Striped Slim Fit Shirt",
-//     price:"599.00",
-//     stripped_price:"2990.00",
-//     off:"(73% off)",
-//     sales_price:"900.00"
-// }]
 
 let Data=JSON.parse(localStorage.getItem('CART')||[]);
-
+let order=JSON.parse(localStorage.getItem('order'))||[];
 console.log(Data);
+
+var bag_tot
+var bag_dis
+var bag
+
 
 display(Data);
 // fetching data from local storage//
@@ -119,21 +91,22 @@ option5.value = "5";
 option5.text = "5";
 size.add(option5);
  var saving=document.createElement("h2");
- saving.textContent="Saving : ₹ "+((parseInt(item.stripped_price)-parseInt(item.price))).toFixed(2);
+ saving.textContent="Saving : ₹ "+((3.33*(parseInt(item.price))-item.price)).toFixed(2);
  var stripped_price=document.createElement("h2")
- stripped_price.textContent="Rs " +(item.stripped_price);
+ stripped_price.textContent="Rs " +(((100-item.discount)/10*(parseInt(item.price)))).toFixed(2);
  
 
 
   qty.addEventListener("change",function(){
-    var pr=(qty.value)*((parseInt(item.stripped_price)-parseInt(item.price)));
+    var pr=(qty.value)*(3*(parseInt(item.price)));
  saving.textContent="Saving : ₹ "+pr.toFixed(2);
- stripped_price.textContent="Rs " +((qty.value)*(item.stripped_price)).toFixed(2);
+ stripped_price.textContent="Rs " +((qty.value)*((parseInt(item.discount)/10)*parseInt(item.price))).toFixed(2);
 
- price.textContent="Rs "+((qty.value)*(item.sales_price)).toFixed(2);
+ price.textContent="Rs "+((qty.value)*(item.price)).toFixed(2);
 
- det2.textContent="₹ -"+ ((qty.value)*(disc)).toFixed(2);
+ det2.textContent="₹ "+ (100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
 
+// det2.textContent="₹"
 
  bagTotal.textContent="₹ "+((qty.value)*(Total)).toFixed(2)
 
@@ -141,18 +114,22 @@ size.add(option5);
 
 
 
+
         // location.href="cart.html"
 });
+
+bag=((qty.value)*(totalAmt)).toFixed(2);
+console.log("this is bag "+bag);
 
 // 
  var div5=document.createElement("div")
  div5.setAttribute("id","Price");
  
  var price=document.createElement("h3")
- price.textContent="Rs "+(item.sales_price);
- var hr=document.createElement("hr");
+ price.textContent="Rs "+(item.price);
+//  var hr=document.createElement("hr");
 
-div5.append(price,hr);
+div5.append(price);
 var div=document.createElement("div");
 div.setAttribute("id","anchor")
 
@@ -165,25 +142,7 @@ div.setAttribute("id","anchor")
     var del = document.getElementById("product");
    Data.splice(index,1);
    console.log(Data);
-   display(Data)
-    
-//    var pr=(qty.value)*((parseInt(item.stripped_price)-parseInt(item.price)));
-//    saving.textContent="Saving : ₹ "+pr.toFixed(2);
-//    stripped_price.textContent="Rs " +((qty.value)*(item.stripped_price)).toFixed(2);
-  
-//    price.textContent="Rs "+((qty.value)*(item.sales_price)).toFixed(2);
-  
-//    det2.textContent="₹ -"+ ((qty.value)*(disc)).toFixed(2);
-  
-  
-//    bagTotal.textContent="₹ "+((qty.value)*(Total)).toFixed(2)
-  
-//    document.getElementById("det4").textContent="₹ "+((qty.value)*(totalAmt)).toFixed(2);
-  
-
-
-
-
+   display(Data);
   });
 
  //
@@ -204,21 +163,45 @@ div3.append(div1,div);
 div1.append(title,Size,size,Qty,qty);
 product.append(div2,div3,div4)
 var det2=document.getElementById("det2");
-disc=+((parseInt(item.stripped_price)-parseInt(item.price))).toFixed(2);
-det2.textContent="₹ -"+ disc.toFixed(2);
+disc=+Math.abs(((parseInt(item.price))-item.price)*3.33).toFixed(2);
+
+disc=+((3.33*(parseInt(item.price))-item.price)).toFixed(2);
+bag_dis=disc;
+console.log(bag_dis);
+det2.textContent="₹"+  disc.toFixed(2);
 
 var bagTotal=document.getElementById("det1");
-Total+=parseInt(item.stripped_price)
-bagTotal.textContent="₹ "+Total.toFixed(2);
+Total+=parseInt((item.price)*(qty.value));
+bagTotal.textContent="₹"+Total.toFixed(2);
 
-totalAmt+=parseFloat(Total-disc);
+totalAmt+=parseFloat(Total);
+bag_tot=totalAmt;
+console.log(bag_tot);
 document.getElementById("det4").textContent="₹ "+totalAmt.toFixed(2);
-document.getElementById("products").append(product);});}
+document.getElementById("products").append(product);});
+
+
+}
 
 
 document.getElementById("total_items").innerText="("+Data.length +" Items)";
 // .innerText=Data.length;
 
+var Data1=[];
+
+localStorage.setItem("bag",Data1);
+console.log(Data1);
+
+function myfun(){
+  location.href="payment.html";
+  order.push(bag_dis);
+  order.push(bag_tot);
+  order.push(bag);
 
 
-
+  // let cartdata= JSON.parse(localStorage.getItem('CART'))
+  // cartdata.push(Data);
+  localStorage.setItem('order',JSON.stringify(order));
+  console.log("working");
+  console.log("thsi is the order"+order);
+}

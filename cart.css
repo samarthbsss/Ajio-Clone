@@ -13,9 +13,14 @@
 margin-left: 100px;
 }
 
+#anchor1{
+    columns: #141d6e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
 
 #products{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height:600px;
     margin-right: 400px;
     margin-left: 30px;
@@ -28,28 +33,17 @@ margin-left: 100px;
     display: flex;
     height: 200px;
     border: 0.005px solid rgb(200, 193, 193);
-    border-radius: 7px;
+    border-radius: 3px;
     gap: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+border: 1px solid rgb(225, 220, 220);
+}
 
-}
-#anchor1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#176D93
-}
-#anchor{
-    margin-top: 160px;
-    
-    /* padding-left: 90px; */
-    /* border: 2px solid rgb(216, 208, 98); */
-    gap: 20px;
-    /* width: 400px; */
-    display: flex;
-}
+
 #first {
     width: 20%;
     /* border: 2px solid black; */
-    gap: 10px;
+    /* gap: 10px; */
    
 }
 #first img{ 
@@ -94,17 +88,23 @@ margin-left: 100px;
 
 #anchor{
     /* border: 2px solid rgb(232, 11, 11); */
-    margin-top: 80px;
+ 
+    margin-right: -190px;
+    
+    display: flex;
+    margin-top: 100px;
     width: 200px;
-    margin-left: 450px;
+    margin-left: 500px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#176D93;
+    font-weight: 100;
 }
 #second select{
     margin-top: 20px;
     height: 40px;
     width: 60px;
     margin-left: 5px;
+    border: none;
     border-radius: 9px;
     text-align: center;
     text-decoration-color: rgb(119, 119, 197);
@@ -115,7 +115,7 @@ margin-left: 100px;
 }
 #third{
     /* border: 2px solid red; */
-    margin-left: -200px;
+    margin-left: -110px;
     font-size: 12px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 150px;
@@ -137,32 +137,35 @@ margin-left: 100px;
     font-family: Source Sans Pro Semi Bold;
 }
 #Price{
-    background-color:#e1c38f;
+    background-color:#e1ecf1;
     /* width: 40%; */
     margin-left: 10px;
     margin-top: 20px;
     text-align: center; 
     /* border: 2px solid red;   */
-    border-radius: 7px;
+  border: left 6px #083144;
+  
     font-size: 16px;
-    width: 140px;
+    width: 100px;
     height: 30px;
     text-align: center;
-    
+    font-family: Source Sans Pro;
     
 
 }
 #Price h3{
     color: #333333;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* margin-top: -.2px; */
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    border-left: #083144;
+    border: left 6px #083144;
     /* margin-left: -85px; */
 }
-#Price hr,#hori{
+/* #Price hr,#hori{
     border-width: 7px;
     border-color: #2f4254;
     border-left: #D5a249;
-}
+} */
 
 #total_items{
     color: #333333;
@@ -173,6 +176,7 @@ margin-left: 100px;
    margin-left: -400px;
    width: 410px;
    border-radius: 7px;
+   font-family: Lora;
 }
 
 
@@ -304,4 +308,4 @@ margin-left: 100px;
 
 button,a,#btn1{
     cursor: pointer;
-}
+} 

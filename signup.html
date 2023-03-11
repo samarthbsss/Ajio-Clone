@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
-    <link rel="stylesheet" href="/styles/signup.css">
+    <link rel="stylesheet" href="signup.css">
     <title>Sign Up</title>
     
 </head>
@@ -69,55 +69,61 @@
 </body>
 </html>
 <script>
-async function signUp(){
-        let name= document.getElementById("name").value
-        let email= document.getElementById("email").value
-        let password= document.getElementById("password").value
-        let mobile= document.getElementById("mobile").value
-        if(name.length === 0) return alert("Please enter a name")
-        if(email.length === 0) return alert("Please enter a email")
-        if(password.length === 0) return alert("Please enter a password")
-    let detail = {
-        name,
-        email,
-        password,
-        mobile,
-    }
-    detail = JSON.stringify(detail);
-    try{
-    let response = await fetch(url, {
-        method:"POST",
-        body: detail,
-        headers:{
-            "Content-Type": "application/json"
-        }
-    });
-    let data = await response.json();
-    
-    if(data.error === true){
-        alert(data.message);
-    } else if (data.va === true){
-        alert(data.errors[0].msg);
-    }
-    else{
-        window.location.href = "/user/login"
-    }
-} catch(e){
-    // alert("Fill Details");
-}
-    
-}
-function LoginUp() {
-    let name= document.getElementById("name").value
-        let email= document.getElementById("email").value
-        let password= document.getElementById("password").value
-        let mobile= document.getElementById("mobile").value
-        if(name.length === 0 && email.length === 0) {
-            window.location.href = "/user/login"
-        }else {
-            signUp()
-        }
-       
-        
-}
+// function signUp() {
+  
+//   var username = document.getElementById("name").value;
+//   var password = document.getElementById("password").value;
+  
+//   // Check if the username already exists in local storage
+//   if (localStorage.getItem(username)) {
+//     alert("Username already exists. Please choose another username.");
+//     return;
+//   }
+  
+//   // Store the username and password in local storage
+//   localStorage.setItem(username, password);
+  
+//   // Redirect the user to the login page
+//   window.location.href = "login.html";
+// }
+
+// // Login Functionality
+// function login() {
+//   // Retrieve input values
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+  
+//   // Check if the username exists in local storage and if the password is correct
+//   if (localStorage.getItem(username) === password) {
+//     alert("Login successful!");
+//     // Redirect the user to the dashboard or homepage
+//     window.location.href = "dashboard.html";
+//   } else {
+//     alert("Incorrect username or password.");
+//   }
+// }
+
+// document.querySelector("form").addEventListener("submit", sign);
+  var objarr= JSON.parse(localStorage.getItem("account-data")) || [];
+  function signUp(){
+    // event.preventDefault();
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+
+    var obj={
+      name:name,
+      email:email,
+      pass:password,
+    };
+    objarr.push(obj);
+    localStorage.setItem("account-data", JSON.stringify(objarr));
+    alert("Signed up successful!")
+  }
+ 
+  function LoginUp(){
+    location.href="login.html";
+  }
+
+
 </script>

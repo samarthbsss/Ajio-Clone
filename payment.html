@@ -7,10 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Payment</title>
-    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" type="text/css" href="payment.css" />
+    <link rel="stylesheet" href="navbar.css">
 </head>
+
   <body>
+
+    <div id="nav-bar"></div>
+  
     <div class="header-container">
         <header>
             <div class="logo-box">
@@ -244,8 +249,8 @@
 
         <!----------------------- LEFT  ------------------------>
 
-        <div class="left">
-            <div class="order-summary">
+        <!-- <div class="left"> -->
+            <!-- <div class="order-summary">
                 <div>Order Summary</div>
                 <div class="summary-amount">
                     <div>Bag Total</div>
@@ -263,13 +268,30 @@
                     <div>Amount Payable</div>
                     <div id="amount-payable">Rs. 0</div>
                 </div>
+            </div> -->
+       
+        <div id="order">
+            <div id="bill">
+                
+                <h4 id="od">Order Details </h4>
+                <br>
+                <p id="ord">Bag Total <span id="det1">Rs 679.00</span></p> 
+                <br>
+                <p id="ord">Bag Discount <span id="det2">Rs 1582.07</span></p>
+                <br>
+                <!-- <p>Delivery <span id="det3"></span></p> -->
+                <p id="ord">delivery &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="det2">   Free!</span></p>
+                <br>
+                <h4 id="od">Order Total<span id="det4">Rs 679.00</span></h4>
+                <br>
+              <button id='btn' onclick="myfun()">  PROCEED TO SHIPPING </button>
+              <hr id="hori">
             </div>
         </div>
-
         <!--------------------- LEFT ENDS ------------------->
     </div>
     <footer>
-        <div><img style="min-width:1263px; width: 100%;" src="images/stripe/above-footer.png" alt=""></div>
+        <!-- <div><img style="min-width:1263px; width: 100%;" src="images/stripe/above-footer.png" alt=""></div>
         <div id="payment">
             <div id="payment_method">
                 <div class="pay_title">
@@ -304,7 +326,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script>
         
 function showMethod(box,method){
@@ -350,9 +372,9 @@ function showMethod(box,method){
    }
    
    //Summary total ----------------------->
-   
+   var getorder=JSON.parse(localStorage.getItem('order'))||[];
    function summary_amount() {
-       let data = JSON.parse(localStorage.getItem('bill'));
+       let data = JSON.parse(localStorage.getItem('order'));
        let bg = document.getElementById('summary-bag-total');
        let del = document.getElementById('summary-delivery');
        let total = document.getElementById('summary-total');
@@ -373,7 +395,26 @@ function showMethod(box,method){
    }
    
    summary_amount();
+
+   function myfun(){
+    location.href="order.html";
+   }
+
+   orderdetail();
+   function orderdetails(){
+    var bag=document.getElementById("det1").innerText=679.00;
+    var tot=document.getElementById("det2").innerHTML="1582.07";
+    var bagtotal=document.getElementById("det4").innerHTML="679.00";
+    // getorder.forEach(function(ele,i){
+    //     bag=ele[i];
+    //     tot=ele
+    // })
+   }
+
+   
+
     </script>
+    <script src="navbar.js"></script>
 </body>
 
 </html>

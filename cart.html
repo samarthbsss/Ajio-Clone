@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart _Page</title>
     <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="Products/styles/navbar.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
@@ -18,7 +18,8 @@
 </head>
 <body>
 
-    <div id="nav-bar"></div>
+    <div id="nav-bar"><img src="Icons/ajioCart.png" alt=""></div>
+    
     <br><br><br><br><br><br>
     <hr>
 
@@ -45,7 +46,7 @@
             <!-- <p>Delivery <span id="det3"></span></p> -->
             <h4 id="od">Order Total<span id="det4"></span></h4>
             <br>
-          <button id='btn'>  PROCEED TO SHIPPING </button>
+          <button id='btn' onclick="myfun()">  PROCEED TO SHIPPING </button>
           <hr id="hori">
         </div>
         <div id="coupon">
@@ -84,6 +85,6 @@
 <div id="main-footer"></div>
 </body>
 <script src="cart.js"></script>
-<script src="Products/components/navbar.js"></script>
+<script src="navbar.js"></script>
 <script src="footer.js"></script>
 </html>

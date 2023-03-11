@@ -308,3 +308,35 @@ text-transform: capitalize;
   /* body,div{
     border: 2px solid teal;
   } */
+
+
+  @media all and (min-width:50px) and (max-width:500px){
+    #data {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    #sidebar {
+     display: none;
+    }
+
+    #sidebar {
+      display: none;
+     }
+     #info{
+       display: none;
+     }
+     #sortbar{
+      display: none;
+     }
+  }
+  /* tablet-view */
+  
+  @media all and (min-width:421px) and (max-width:900px){
+    #data {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+  
+  }

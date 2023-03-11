@@ -4,7 +4,7 @@
     
     
     let nav=`<div id="navbar">
-        <a href="/Index.html">
+        <a href="index.html">
           <img
             id="ima_head"
             src="https://assets.ajio.com/static/img/Ajio-Logo.svg"
@@ -13,7 +13,7 @@
         </a>
         <div id="links">
           <div class="dropdown" >
-            <a class="active" href="../Ajio-Clone/Products/pages/mens.html" id="test">MEN</a>
+            <a class="active" href="mens.html" id="test">MEN</a>
             <div class="dropdown-content">
               <div class="d1">
                 <div class="catog">
@@ -558,12 +558,12 @@
             <div class="A">
               
             </div>
-            <a href="file:///Z:/Assignments/ConstructWeek2/Ajio-Clone/wishlist.html" id="closet">
+            <a href="wishlist.html" id="closet">
              
              <img src='https://assets.ajio.com/static/img/wishlistIcon.svg'>
             </a>
-            <a href="file:///Z:/Assignments/ConstructWeek2/Ajio-Clone/cart.html" id="cart">
-           <img src="../resources/img/cartico2.png">
+            <a href="cart.html" id="cart">
+           <img src="cartico2.png">
               
             </a>
           </div>
@@ -585,7 +585,7 @@
 
 
 function sign(){
-  location.href="Z:\Assignments\ConstructWeek2\Ajio-Clone\signup.html";
+  location.href="signup.html";
 }
 document.getElementById('nav-bar').innerHTML = nav;
 //   export default navbar;
