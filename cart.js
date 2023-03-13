@@ -92,23 +92,28 @@ option5.text = "5";
 size.add(option5);
  var saving=document.createElement("h2");
  saving.textContent="Saving : ₹ "+((3.33*(parseInt(item.price))-item.price)).toFixed(2);
+ saving.textContent="Saving : ₹ "+((3.33*(parseInt(item.price))-item.price)).toFixed(2);
  var stripped_price=document.createElement("h2")
+ stripped_price.textContent="Rs " +(((100-item.discount)/10*(parseInt(item.price)))).toFixed(2);
  stripped_price.textContent="Rs " +(((100-item.discount)/10*(parseInt(item.price)))).toFixed(2);
  
 
 
   qty.addEventListener("change",function(){
     var pr=(qty.value)*(3*(parseInt(item.price)));
+    var pr=(qty.value)*(3*(parseInt(item.price)));
  saving.textContent="Saving : ₹ "+pr.toFixed(2);
  stripped_price.textContent="Rs " +((qty.value)*((parseInt(item.discount)/10)*parseInt(item.price))).toFixed(2);
+ stripped_price.textContent="Rs " +((qty.value)*((parseInt(item.discount)/10)*parseInt(item.price))).toFixed(2);
 
+ price.textContent="Rs "+((qty.value)*(item.price)).toFixed(2);
  price.textContent="Rs "+((qty.value)*(item.price)).toFixed(2);
 
  det2.textContent="₹ "+ (100*(parseInt(item.price)/parseInt(item.discount))).toFixed(2);
 
 // det2.textContent="₹"
 
- bagTotal.textContent="₹ "+((qty.value)*(Total)).toFixed(2)
+ bagTotal.textContent="₹ "+Math.abs(((qty.value)*(Total)).toFixed(2));
 
  document.getElementById("det4").textContent="₹ "+((qty.value)*(totalAmt)).toFixed(2);
 
@@ -129,6 +134,7 @@ console.log("this is bag "+bag);
  price.textContent="Rs "+(item.price);
 //  var hr=document.createElement("hr");
 
+div5.append(price);
 div5.append(price);
 var div=document.createElement("div");
 div.setAttribute("id","anchor")
